@@ -20,6 +20,8 @@
 * Information Security Architect
 * Product Manager
 
+![Logo](artifacts/images/logo7.png)
+
 --- 
 
 ### Уведомление
