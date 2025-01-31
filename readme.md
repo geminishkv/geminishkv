@@ -10,7 +10,7 @@
 
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-you_would_like-15172a)![AppSec Badge](https://img.shields.io/badge/AppSec-15172a)![SSDLC Badge](https://img.shields.io/badge/DevOps-15172a)![STLC Badge](https://img.shields.io/badge/QA/STLC-15172a)
 
-![Logo](/images/logo.png)
+![Logo](artifacts/images/logo4.png)
 
 ## Salute, рад тебя видеть на этой странице,
 Начну с self intro: более 8 лет работает в сфере информационной безопасности для продуктовой разработки. Занимаюсь построением руководителем группой офицеров информационной безопасности, развивает DevSecOps. Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev.
