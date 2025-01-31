@@ -25,11 +25,11 @@
 
 
 
-- [Security Champion course](https://inseca.tech/security-champion-training) - курс который веду. 
+[//]: # - [Security Champion course](https://inseca.tech/security-champion-training) - курс который веду. 
 
-- Вышел подкаст со мною по безопасной разработке - https://t.me/aktivcons/1483
+[//]: # - Вышел подкаст со мною по безопасной разработке - https://t.me/aktivcons/1483
 
-- Интервью с ассоциацией BISA по безопасной разработке ПО: https://youtu.be/sPGhWWaWUdE
+[//]: # - Интервью с ассоциацией BISA по безопасной разработке ПО: https://youtu.be/sPGhWWaWUdE
 
 DevSecOps Teamled
 
@@ -80,18 +80,18 @@ DevSecOps Teamled
 
 [//]: # ( [Перейти к Заголовку 1](#title1) )
 
-## <a id="title1">Заголовок 1</a>
-Какой-то контент
+[//]: # ## <a id="title1">Заголовок 1</a>
+[//]: # Какой-то контент
 
 ### 
 
-- [x] @mentions, #refs, [links](),
+[//]: # - [x] @mentions, #refs, [links](),
 **formatting**, and <del>tags</del>
 supported
-- [x] list syntax required (any
+[//]: # - [x] list syntax required (any
 unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+[//]: # - [x] this is a complete item
+[//]: # - [ ] this is an incomplete item
 
 
 !!! important "Мое уведомление"
