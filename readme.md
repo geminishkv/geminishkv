@@ -185,7 +185,7 @@ DevOps
 > * Подкаст по безопасной разработке [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) и [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
 > * Интервью с ассоциацией BISA, на [YouTube](https://youtu.be/sPGhWWaWUdE) по безопасной разработке ПО
 
-</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a> ![Logo](artifacts/images/logo3.png)
+![Logo](artifacts/images/logo3.png)
 
 > [!caution]
 > ##### Вся информация в материалах данного профиля, включенных репозиториев (согласно применименым формулировкам GitHub), то есть любые текстовые, графические произведения, - рассматривается исключительно в ознакомительных целях.
