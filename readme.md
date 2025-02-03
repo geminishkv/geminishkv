@@ -28,7 +28,7 @@
 > Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261)
 
 <div align="left">
-
+</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
 <details>
   <summary>
 <strong>Специализация</strong>
@@ -45,6 +45,7 @@
 </details>
 </div>
 
+</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
 <details>
   <summary>
 <strong>Компетенции</strong>
@@ -91,6 +92,7 @@ DevOps
 </details>
 </div>
 
+</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
 <details>
   <summary>
 <strong>Сертификация</strong>
