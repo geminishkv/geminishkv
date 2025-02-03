@@ -13,7 +13,7 @@
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-you_would_like-15172a)![AppSec Badge](https://img.shields.io/badge/AppSec-15172a)![SSDLC Badge](https://img.shields.io/badge/DevOps-15172a)![DevSecOps Badge](https://img.shields.io/badge/Creditionals-From_Russia_with_love-8b9aff)
 </div>
 
-Салют :wave:,
+Салют :wave:, <br>
 Более 8 леn в сфере ИБ продуктовой разработки. <br> Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. 
 
 ![Logo](artifacts/images/logo.png)
