@@ -13,14 +13,14 @@
 ![Logo](artifacts/images/logo.png)
 
 ### Специализация
-* DevSecOps Product Owner
+* DevSecOps & DASA DevOps Product Owner
 * DevOps-инженер
 * AppSec-инженер
 * Business Information Security Officer
 * Information Security Architect
 * Product Manager
 
-![Logo](artifacts/images/logo7.png)
+![Logo](artifacts/images/logo3.png)
 
 --- 
 
