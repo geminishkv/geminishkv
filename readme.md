@@ -93,8 +93,7 @@ DevOps
 </details>
 </div>
 
-</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
-<details>
+</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a><details>
   <summary>
 <strong>Сертификация</strong>
   </summary>
