@@ -12,7 +12,7 @@
 <br>Салют :wave:, </br>
 Более 8 леn в сфере ИБ продуктовой разработки. <br> Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. 
 
-![Logo](artifacts/logo.png)
+![Logo](artifacts/logo.jpg)
 
 * MA Degree МГТУ им. Н. Э. Баумана - высшее техническое (разработка ПО, криптография и системы защиты информации, ТЗИ)
 * Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev
