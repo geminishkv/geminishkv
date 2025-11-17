@@ -49,6 +49,8 @@
 * TDD/ BDD
 * Orchestration
 
+***
+
 ### Сертификаты
 
 <link rel="stylesheet" href="artifacts/style/style.css">
