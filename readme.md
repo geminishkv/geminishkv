@@ -1,104 +1,74 @@
 <div align="center">
-<h1><a id="intro"> geminishkv <sup><kbd>DevSecOps TeamLead</kbd></sup></a><br></h1>
+<h1><a id="intro"> geminishkv <sup><kbd>AppSec TeamLead</kbd></sup></a><br></h1>
 <a href="https://docs.github.com/en"><img src="https://img.shields.io/static/v1?logo=github&logoColor=fff&label=&message=Docs&color=36393f&style=flat" alt="GitHub Docs"></a>
 <a href="https://daringfireball.net/projects/markdown"><img src="https://img.shields.io/static/v1?logo=markdown&logoColor=fff&label=&message=Markdown&color=36393f&style=flat" alt="Markdown"></a> 
 <a href="https://symbl.cc/en/unicode-table"><img src="https://img.shields.io/static/v1?logo=unicode&logoColor=fff&label=&message=Unicode&color=36393f&style=flat" alt="Unicode"></a> 
 <a href="https://shields.io"><img src="https://img.shields.io/static/v1?logo=shieldsdotio&logoColor=fff&label=&message=Shields&color=36393f&style=flat" alt="Shields"></a>
 <a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Software_Development-Risk_Analyze-2448a2" alt= "RA"></a>
 <a href="https://img.shields.io/badge/Product_Management-2448a2"><img src="https://img.shields.io/badge/Product_Management-2448a2" alt= "PO"></a>
-<a href="https://img.shields.io/badge/Shift_Left-2448a2"><img src="https://img.shields.io/badge/Shift_Left-2448a2" alt= "SL"></a>
 <a href="https://img.shields.io/badge/STLC-2448a2"><img src="https://img.shields.io/badge/STLC-2448a2" alt= "STLS"></a>
+<img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a><img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a></div>
 
-
-![DevSecOps](https://img.shields.io/badge/DevSecOps-you_would_like-15172a)![AppSec Badge](https://img.shields.io/badge/AppSec-15172a)![SSDLC Badge](https://img.shields.io/badge/DevOps-15172a)![DevSecOps Badge](https://img.shields.io/badge/Creditionals-From_Russia_with_love-8b9aff)
-</div>
-
-Салют :wave:, <br>
+<br>Салют :wave:, </br>
 Более 8 леn в сфере ИБ продуктовой разработки. <br> Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. 
 
-![Logo](artifacts/images/logo.png)
+![Logo](artifacts/logo.png)
 
 * MA Degree МГТУ им. Н. Э. Баумана - высшее техническое (разработка ПО, криптография и системы защиты информации, ТЗИ)
 * Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev
-* Опыт управления и развития технологических проектов. Опыт формирования сильных результативных команд
-* Активный участник конференций, форумов в области ИБ и ИТ
+* Опыт управления и развития технологических проектов.
+* Опыт формирования сильных результативных команд
 * Являюсь лидером сообщества [FinDevSecOps](https://findevsecops.ru) для fintech на рынке РФ
-* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training)
+* Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261) и как [это было](https://t.me/shmakovis_appsec/16)
+* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training) и для [МФТИ](https://kiberbez-tech.ru/#contacts)
+* Преподаю в МГТУ им. Н.Э. Баумана
+* Активный участник конференций, форумов в области ИБ и ИТ
+* Веду практический [блог](https://t.me/shmakovis_appsec) и [тут](https://t.me/shmakovis_appsec/4) можно почитать обо мне
 
-> [!note]
-> Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261)
+> * Подкаст по безопасной разработке [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) и [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
+> * Интервью с ассоциацией BISA, на [YouTube](https://youtu.be/sPGhWWaWUdE) по безопасной разработке ПО
 
-<div align="left">
-</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
-<details>
-  <summary>
-<strong>Специализация</strong>
-  </summary>
- <p>
+***
+
+### Специализация
  
-* DevSecOps & DASA DevOps Product Owner
+* DevSecOps
+* DASA DevOps Product Owner
 * DevOps-инженер
 * AppSec-инженер
 * Business Information Security Officer
 * Information Security Architect
 
- </p>
-</details>
-</div>
+### Компетенции
 
-</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a>
-<details>
-  <summary>
-<strong>Компетенции</strong>
-  </summary>
- <p>
-
-Infosec
-* OWASP Top 10 web & mob
-* Methodology
-* IRM/ SGRC
+* Application Security
 * Compliance/ Governance
 * Vulnerability Management
-* ASTO (ASPM)
-* Container Security
-* AppArmor
 * Software Testing Life Cycle
-* Secret Management
-
-DevOps
-* GIT
-* CLI
-* Docker
-* Bash/ Brew
 * Supply Chain Management
-* Supply Chain Optimisation
 * TDD/ BDD
-* JSON API
 * Orchestration
-* AWS/ Azure
-* Fargate
-* Jmeter tests
-* *nix
-* DHCP (master, slave)/ DNS
 
- Management
-* Оптимизация бизнес-процессов
-* Lean Production
-* DMAIC
-* CJM
-* Agile/ Scrumban
-* Change Management
-
- </p>
-</details>
-</div>
-
-</a><a href="#intro"><img align="right" height="32px" src="artifacts/Assets/top.svg"></a><details>
+<details>
   <summary>
-<strong>Сертификация</strong>
+<strong>Сертификаты</strong>
   </summary>
  <p>
- 
+<style>
+  .compact-table {
+    font-size: 10px;
+  }
+  .compact-table table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .compact-table th, .compact-table td {
+    border: 1px solid #999;
+    padding: 4px;
+    text-align: left;
+  }
+ </style>
+<div class="compact-table">
 <table>
     <tr>
         <td rowspan="12">УЦ "Специалист" МГТУ им. Н.Э. Баумана</td>
@@ -137,56 +107,10 @@ DevOps
         <td>Otus</td>
         <td>Внедрение и работа в DevSecOps</td>
     </tr>
-  
-</table>
+</table></p></details></div>
 
-</p>
-</details>
-</div>
-
-<details>
-  <summary>
-<strong>Кейсы</strong>
-  </summary>
- <p>
- 
- TBD
- 
-</p>
-</details>
-</div>
-
-<details>
-  <summary>
-<strong>Wiki</strong>
-  </summary>
- <p>
- 
- TBD
- 
-  </p>
-</details>
-</div>
-
-<details>
-  <summary>
-<strong>Статьи</strong>
-  </summary>
- <p>
- 
- TBD
- 
-  </p>
-</details>
-</div>
-
-> [!tip]
-> * Подкаст по безопасной разработке [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) и [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
-> * Интервью с ассоциацией BISA, на [YouTube](https://youtu.be/sPGhWWaWUdE) по безопасной разработке ПО
-
-![Logo](artifacts/images/logo3.png)
-
-> [!caution]
+![Logo](artifacts/AppSecTA.png)
+> Уведомление
 > ##### Вся информация в материалах данного профиля, включенных репозиториев (согласно применименым формулировкам GitHub), то есть любые текстовые, графические произведения, - рассматривается исключительно в ознакомительных целях.
 > ##### Любое использование представленной информации посредством данного профиля и/или любых текстовых, графических произведений в репозиториях, на практике без получения предварительного согласования на проведение тестирования у субьекта, подпадает под действие действующего законодательства 
 > ##### Автор не несет ответственности за любой возможный вред, причиненный предоставлемыми материалами, как любыми текстовыми, графическими произведениями.
