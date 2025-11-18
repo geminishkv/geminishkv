@@ -11,23 +11,26 @@
 
 <br>Салют :wave:, </br>
 Более 8 леn в сфере ИБ продуктовой разработки. 
-Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. 
+Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analysis. 
 
 ![Logo](artifacts/logotype/logo.jpg)
 
-* MA Degree МГТУ им. Н. Э. Баумана - высшее техническое (разработка ПО, криптография и системы защиты информации, ТЗИ)
+* MA Degree МГТУ им. Н. Э. Баумана
 * Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev
-* Опыт управления и развития технологических проектов.
-* Опыт формирования сильных результативных команд
+* Проектирую и внедряю сервисы защищенности поставок кода, а также AppSec Toolchain механизмы
+* Обладаю успешным опытом управления и развития технологических проектов
+* Обладаю успешным опытом выстраивания процессов DevSecOps и результативных команд
 * Являюсь лидером сообщества [FinDevSecOps](https://findevsecops.ru) для fintech на рынке РФ
-* Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261) и как [это было](https://t.me/shmakovis_appsec/16)
-* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training) и для [МФТИ](https://kiberbez-tech.ru/#contacts)
-* Преподаю в МГТУ им. Н.Э. Баумана
-* Активный участник конференций, форумов в области ИБ и ИТ
+* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training) 
+* Преподаю курс для [МФТИ](https://kiberbez-tech.ru/#contacts)
+* Преподаю в МГТУ им. Н.Э. Баумана на постоянной основе
+* Активный участник конференций, форумов в области ИБ
 * Веду практический [блог](https://t.me/shmakovis_appsec) и [тут](https://t.me/shmakovis_appsec/4) можно почитать обо мне
 
 > * Подкаст по безопасной разработке [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) и [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
 > * Интервью с ассоциацией BISA, на [YouTube](https://youtu.be/sPGhWWaWUdE) по безопасной разработке ПО
+> * Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261) и как [это было](https://t.me/shmakovis_appsec/16)
+> * Развиваю в сообществе [FinDevSecOps](https://findevsecops.ru) open-source [карту](https://storage.yandexcloud.net/aft-tilda/Карта%20инструментов%20DevSecOps.pdf) инструментов по AppSec Toolchain, учитывая решения для импортозамещения
 
 ***
 
