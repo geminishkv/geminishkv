@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a><img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a></div>
 
 <br>Салют :wave:, </br>
-Более 8 леn в сфере ИБ продуктовой разработки. Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. 
+<br>Более 8 леn в сфере ИБ продуктовой разработки. Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analyse. </br>
 
 ![Logo](artifacts/logotype/logo.jpg)
 
