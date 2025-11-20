@@ -61,7 +61,7 @@
 <div class="compact-table">
 <table>
     <tr>
-        <td rowspan="12">УЦ "Специалист" МГТУ им. Н.Э. Баумана</td>
+        <th rowspan="12">УЦ "Специалист" МГТУ им. Н.Э. Баумана</th>
     </tr><tr>
         <td>Руководитель команды разработки</td>
     </tr><tr>
@@ -85,16 +85,16 @@
     </tr><tr>
         <td>Создание отказоустойчивых кластерных решений</td>
     </tr><tr>
-        <td>CyberED</td>
+        <th>CyberED</th>
         <td>Безопасность WEB-приложении и практика определения угроз по OWASP TOP 10</td>
     </tr><tr>
-        <td>Kaspersky Academy</td>
+        <th>Kaspersky Academy</th>
         <td>Информационная безопасность предприятия</td>
     </tr><tr>
-        <td>Информзащита</td>
+        <th>Информзащита</th>
         <td>Безопасность Web-приложений</td>
     </tr><tr>
-        <td>Otus</td>
+        <th>Otus</th>
         <td>Внедрение и работа в DevSecOps</td>
     </tr>
 </table></div>
