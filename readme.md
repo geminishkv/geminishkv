@@ -79,3 +79,33 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 * Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
 
 ![Logo](artifacts/logotype/logo.jpg)
+> ### Disclaimer
+>
+> All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.
+> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.
+> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.
+> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.
+
+
+---
+
+### Certificates
+
+| ContentId | Area | PageTitle | MetaDescription |
+| --- | --- | --- | --- |
+| UC-SPEC | Training Center Specialist, BMSTU | Team Lead in Software Development | Course on managing a software development team. |
+| UC-SPEC-DEVOPS | Training Center Specialist, BMSTU | DevOps Engineer | Course on DevOps engineering practices. |
+| UC-SPEC-DEVOPS-PRO | Training Center Specialist, BMSTU | Certificate_DevOps Professional | Professional DevOps certification. |
+| UC-SPEC-AGILE-SCRUM | Training Center Specialist, BMSTU | Agile - Scrum Management | Managing development using Agile/Scrum. |
+| UC-SPEC-SOFT-TEST | Training Center Specialist, BMSTU | Certificate_Software testing | Course on software testing. |
+| UC-SPEC-DASA-DEVOPS | Training Center Specialist, BMSTU | DASA: DevOps Practitioner for Team Organization | Practical DASA DevOps course. |
+| UC-SPEC-QA-PROJECTS | Training Center Specialist, BMSTU | Quality Management in Projects and Services | Course on quality management in IT projects. |
+| UC-SPEC-NET-ADMIN | Training Center Specialist, BMSTU | Administration of Services and Networks | Administration of services and network infrastructures. |
+| UC-SPEC-SEC-SYSTEMS | Training Center Specialist, BMSTU | Security of Systems, Services, and Networks | Information security of systems and networks. |
+| UC-SPEC-ZABBIX | Training Center Specialist, BMSTU | Zabbix. Monitoring of Enterprise IT Infrastructure | Monitoring IT infrastructure with Zabbix. |
+| UC-SPEC-CLUSTERS | Training Center Specialist, BMSTU | Building Fault-Tolerant Cluster Solutions | Cluster and high-availability solutions. |
+| CYBERED-OWASP | CyberED | Web Application Security and Threat Detection Practice Based on OWASP TOP 10 | Course on OWASP Top 10 web application threats. |
+| KASP-IS-ENTERPRISE | Kaspersky Academy | Enterprise Information Security | Corporate information security. |
+| INFOSEC-WEB | Informzashita | Web Application Security | Practical web application security. |
+| OTUS-DEVSECOPS | Otus | Implementation and Work in DevSecOps | Implementation of DevSecOps processes for business |
+
