@@ -1,0 +1,75 @@
+certificates:
+  - ContentId: 'UC-SPEC'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Team Lead in Software Development'
+    MetaDescription: 'Course on managing a software development team.'
+
+  - ContentId: 'UC-SPEC-DEVOPS'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'DevOps Engineer'
+    MetaDescription: 'Course on DevOps engineering practices.'
+
+  - ContentId: 'UC-SPEC-DEVOPS-PRO'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Certificate_DevOps Professional'
+    MetaDescription: 'Professional DevOps certification.'
+
+  - ContentId: 'UC-SPEC-AGILE-SCRUM'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Agile - Scrum Management'
+    MetaDescription: 'Managing development using Agile/Scrum.'
+
+  - ContentId: 'UC-SPEC-SOFT-TEST'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Certificate_Software testing'
+    MetaDescription: 'Course on software testing.'
+
+  - ContentId: 'UC-SPEC-DASA-DEVOPS'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'DASA: DevOps Practitioner for Team Organization'
+    MetaDescription: 'Practical DASA DevOps course.'
+
+  - ContentId: 'UC-SPEC-QA-PROJECTS'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Quality Management in Projects and Services'
+    MetaDescription: 'Course on quality management in IT projects.'
+
+  - ContentId: 'UC-SPEC-NET-ADMIN'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Administration of Services and Networks'
+    MetaDescription: 'Administration of services and network infrastructures.'
+
+  - ContentId: 'UC-SPEC-SEC-SYSTEMS'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Security of Systems, Services, and Networks'
+    MetaDescription: 'Information security of systems and networks.'
+
+  - ContentId: 'UC-SPEC-ZABBIX'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Zabbix. Monitoring of Enterprise IT Infrastructure'
+    MetaDescription: 'Monitoring IT infrastructure with Zabbix.'
+
+  - ContentId: 'UC-SPEC-CLUSTERS'
+    Area: 'Training Center "Specialist", Bauman MSTU'
+    PageTitle: 'Building Fault-Tolerant Cluster Solutions'
+    MetaDescription: 'Cluster and high-availability solutions.'
+
+  - ContentId: 'CYBERED-OWASP'
+    Area: 'CyberED'
+    PageTitle: 'Web Application Security and Threat Detection Practice Based on OWASP TOP 10'
+    MetaDescription: 'Course on OWASP Top 10 web application threats.'
+
+  - ContentId: 'KASP-IS-ENTERPRISE'
+    Area: 'Kaspersky Academy'
+    PageTitle: 'Enterprise Information Security'
+    MetaDescription: 'Corporate information security.'
+
+  - ContentId: 'INFOSEC-WEB'
+    Area: 'Informzashita'
+    PageTitle: 'Web Application Security'
+    MetaDescription: 'Practical web application security.'
+
+  - ContentId: 'OTUS-DEVSECOPS'
+    Area: 'Otus'
+    PageTitle: 'Implementation and Work in DevSecOps'
+    MetaDescription: 'Implementation of DevSecOps processes.'

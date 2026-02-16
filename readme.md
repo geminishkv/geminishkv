@@ -1,19 +1,21 @@
 <div align="center">
-<h1><a id="intro"> geminishkv <sup><kbd>AppSec TeamLead</kbd></sup></a><br></h1>
-<a href="https://docs.github.com/en"><img src="https://img.shields.io/static/v1?logo=github&logoColor=fff&label=&message=Docs&color=36393f&style=flat" alt="GitHub Docs"></a>
-<a href="https://daringfireball.net/projects/markdown"><img src="https://img.shields.io/static/v1?logo=markdown&logoColor=fff&label=&message=Markdown&color=36393f&style=flat" alt="Markdown"></a> 
-<a href="https://symbl.cc/en/unicode-table"><img src="https://img.shields.io/static/v1?logo=unicode&logoColor=fff&label=&message=Unicode&color=36393f&style=flat" alt="Unicode"></a> 
-<a href="https://shields.io"><img src="https://img.shields.io/static/v1?logo=shieldsdotio&logoColor=fff&label=&message=Shields&color=36393f&style=flat" alt="Shields"></a>
-<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Software_Development-RA-2448a2" alt= "RA"></a>
-<a href="https://img.shields.io/badge/Product_Management-2448a2"><img src="https://img.shields.io/badge/PMI-2448a2" alt= "PO"></a>
-<a href="https://img.shields.io/badge/STLC-2448a2"><img src="https://img.shields.io/badge/STLC-2448a2" alt= "STLS"></a>
-<img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a><img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a></div>
+
+  <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Team Lead</kbd></sup>
+</h1>
+
+  <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/AppSec-2448a2" alt="Application Security">
+  <img src="https://img.shields.io/badge/DevSecOps-2448a2" alt="DevSecOps">
+  <img src="https://img.shields.io/badge/Risk_Analysis-2448a2" alt="Risk Analysis">
+  <img src="https://img.shields.io/badge/Product_Management-2448a2" alt="Product Management">
+  <img src="https://img.shields.io/badge/STLC-2448a2" alt="STLC">
+  <img src="https://img.shields.io/badge/Contributor-%D0%A8%D0%BC%D0%B0%D0%BA%D0%BE%D0%B2__%D0%98._%D0%A1.-8b9aff" alt="Contributor: Шмаков И. С.">
+
+</div>
 
 <br>Салют :wave:, </br>
-Более 8 леn в сфере ИБ продуктовой разработки. 
-Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analysis. 
-
-![Logo](artifacts/logotype/logo.jpg)
+Более 8 леn в сфере ИБ продуктовой разработки.
+Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analysis.
 
 * MA Degree МГТУ им. Н. Э. Баумана
 * Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev
@@ -21,7 +23,7 @@
 * Обладаю успешным опытом управления и развития технологических проектов
 * Обладаю успешным опытом выстраивания процессов DevSecOps и результативных команд
 * Являюсь лидером сообщества [FinDevSecOps](https://findevsecops.ru) для fintech на рынке РФ
-* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training) 
+* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training)
 * Преподаю курс для [МФТИ](https://kiberbez-tech.ru/#contacts)
 * Преподаю в МГТУ им. Н.Э. Баумана на постоянной основе
 * Активный участник конференций, форумов в области ИБ
@@ -35,7 +37,7 @@
 ***
 
 ### Специализация
- 
+
 * DevSecOps
 * DASA DevOps Product Owner
 * DevOps-инженер
@@ -55,54 +57,5 @@
 
 ***
 
-### Сертификаты
 
-<link rel="stylesheet" href="artifacts/style/style.css">
-<div class="compact-table">
-<table>
-    <tr>
-        <th rowspan="12">УЦ "Специалист" МГТУ им. Н.Э. Баумана</th>
-    </tr><tr>
-        <td>Руководитель команды разработки</td>
-    </tr><tr>
-        <td>Инженер DevOps</td>
-    </tr><tr>
-        <td>Certificate_DevOps Professional</td>
-    </tr><tr>
-    <td>Agile - Scrum Management</td>
-    </tr><tr>
-        <td>Certificate_Software testing</td>
-    </tr><tr>
-        <td>DASA: Практик DevOps по организации работы команды</td>
-    </tr><tr>
-        <td>Управление качеством в проектах и сервисах</td>
-    </tr><tr>
-        <td>Администрирование сервисов и сетей</td>
-    </tr><tr>
-        <td>Обеспечение безопасности систем, сервисов и сетей</td>
-    </tr><tr>
-        <td>Zabbix. Мониторинг IT инфраструктуры предприятия</td>
-    </tr><tr>
-        <td>Создание отказоустойчивых кластерных решений</td>
-    </tr><tr>
-        <th>CyberED</th>
-        <td>Безопасность WEB-приложении и практика определения угроз по OWASP TOP 10</td>
-    </tr><tr>
-        <th>Kaspersky Academy</th>
-        <td>Информационная безопасность предприятия</td>
-    </tr><tr>
-        <th>Информзащита</th>
-        <td>Безопасность Web-приложений</td>
-    </tr><tr>
-        <th>Otus</th>
-        <td>Внедрение и работа в DevSecOps</td>
-    </tr>
-</table></div>
-
-***
-
-> ### Уведомление
-> ##### Вся информация в материалах данного профиля, включенных репозиториев (согласно применименым формулировкам GitHub), то есть любые текстовые, графические произведения, - рассматривается исключительно в ознакомительных целях.
-> ##### Любое использование представленной информации посредством данного профиля и/или любых текстовых, графических произведений в репозиториях, на практике без получения предварительного согласования на проведение тестирования у субьекта, подпадает под действие действующего законодательства 
-> ##### Автор не несет ответственности за любой возможный вред, причиненный предоставлемыми материалами, как любыми текстовыми, графическими произведениями.
-> ##### Любые текстовые, графические произведения, включая ссылки носят ознакомительный характер в цели поделиться знаниями в продуктовой безопасности.
+![Logo](artifacts/logotype/logo.jpg)

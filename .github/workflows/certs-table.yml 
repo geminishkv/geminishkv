@@ -1,0 +1,62 @@
+name: Build certs table
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - certs.yaml
+
+jobs:
+  build-table:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Markdown table from YAML
+        id: table
+        uses: gazab/create-markdown-table@v1
+        with:
+          file: ./certs.yaml
+          columns: '["ContentId","Area","PageTitle","MetaDescription"]'
+
+      - name: Append table and notice to README
+        run: |
+          TABLE="${{ steps.table.outputs.table }}"
+          CONTENT="$(cat README.md)"
+
+          NOTICE=$(cat << 'EOF'
+          > ### Уведомление
+          >
+          > ##### Вся информация в материалах данного профиля, включенных репозиториев (согласно применименым формулировкам GitHub), то есть любые текстовые, графические произведения, - рассматривается исключительно в ознакомительных целях
+          >
+          > ##### Любое использование представленной информации посредством данного профиля и/или любых текстовых, графических произведений в репозиториях, на практике без получения предварительного согласования на проведение тестирования у субьекта, подпадает под действие действующего законодательства
+          >
+          > ##### Автор не несет ответственности за любой возможный вред, причиненный предоставлемыми материалами, как любыми текстовыми, графическими произведениями
+          >
+          > ##### Любые текстовые, графические произведения, включая ссылки носят ознакомительный характер в цели поделиться знаниями в продуктовой безопасности
+          EOF
+          )
+
+          if ! grep -q "### Уведомление" <<< "$CONTENT"; then
+            CONTENT="${CONTENT}
+
+${NOTICE}"
+          fi
+          
+          cat > README.md << EOF
+          ${CONTENT}
+
+          ---
+
+          ## Certificates
+
+          ${TABLE}
+          EOF
+
+      - name: Commit updated table
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update certificates table from YAML"
+          file_pattern: README.md
