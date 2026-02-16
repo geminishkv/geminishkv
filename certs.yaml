@@ -72,4 +72,4 @@ certificates:
   - ContentId: 'OTUS-DEVSECOPS'
     Area: 'Otus'
     PageTitle: 'Implementation and Work in DevSecOps'
-    MetaDescription: 'Implementation of DevSecOps processes.'
+    MetaDescription: 'Implementation of DevSecOps processes for business'
