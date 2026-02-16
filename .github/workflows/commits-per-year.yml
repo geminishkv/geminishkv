@@ -18,50 +18,53 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Count commits for all repos
+      - name: Count commits
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_USER: geminishkv
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          python - << 'EOF'
-          import os, json, subprocess, datetime, math
+          python3 - << 'EOF'
+          import os
+          import json
+          import requests
+          from datetime import datetime
 
-          token = os.environ["GITHUB_TOKEN"]
-          user  = os.environ["GH_USER"]
+          token = os.environ["GH_PAT"]
+          user = "geminishkv"  # Твой username
+          headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
 
-          def gh_api(path, extra_args=None):
-            cmd = ["gh", "api", path]
-            if extra_args:
-              cmd += extra_args
-            return subprocess.check_output(cmd, text=True)
+          def get_repos():
+              url = f"https://api.github.com/user/repos?per_page=100&type=owner"
+              resp = requests.get(url, headers=headers)
+              if resp.status_code != 200:
+                  raise ValueError(f"Repos error: {resp.status_code}")
+              return [r["name"] for r in resp.json()]
 
-          # login gh cli
-          subprocess.run(["gh", "auth", "login", "--with-token"], input=token, text=True)
+          def count_commits_repo(repo, year):
+              since = f"{year}-01-01T00:00:00Z"
+              until = f"{year}-12-31T23:59:59Z"
+              url = f"https://api.github.com/repos/{user}/{repo}/commits"
+              params = {"since": since, "until": until, "per_page": 100}
+              resp = requests.get(url, headers=headers, params=params)
+              if resp.status_code == 404:
+                  return 0  # Repo приват/удален
+              resp.raise_for_status()
+              commits = resp.json()
+              count = len(commits)
+              # Paginate если много
+              while "next" in resp.links:
+                  resp = requests.get(resp.links["next"]["url"], headers=headers)
+                  resp.raise_for_status()
+                  count += len(resp.json())
+              return count
 
-          def list_repos():
-            out = gh_api(f"/users/{user}/repos", ["--paginate", "-q", ".[].name"])
-            return [line.strip() for line in out.splitlines() if line.strip()]
-
-          def count_commits(year):
-            since = f"{year}-01-01T00:00:00Z"
-            until = f"{year}-12-31T23:59:59Z"
-            total = 0
-            for repo in list_repos():
-              path = f"/repos/{user}/{repo}/commits"
-              out = gh_api(path, ["--paginate",
-                                  f"-Fsince={since}",
-                                  f"-Funtil={until}",
-                                  "-q", "length(.)"])
-              total += sum(int(x) for x in out.splitlines() if x.strip())
-            return total
-
-          commits_2025 = count_commits(2025)
-          commits_2026 = count_commits(2026)
+          repos = get_repos()
+          commits_2025 = sum(count_commits_repo(repo, 2025) for repo in repos)
+          commits_2026 = sum(count_commits_repo(repo, 2026) for repo in repos)
 
           data = {"commits_2025": commits_2025, "commits_2026": commits_2026}
-          with open("commits.json", "w", encoding="utf-8") as f:
-            json.dump(data, f)
-
+          with open("commits.json", "w") as f:
+              json.dump(data, f, indent=2)
+          print(f"2025: {commits_2025}, 2026: {commits_2026}")
           EOF
 
       - name: Commit changes
