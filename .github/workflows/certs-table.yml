@@ -25,10 +25,10 @@ jobs:
           file: ./certs.yaml
           columns: '["ContentId","Area","PageTitle","MetaDescription"]'
 
-      - name: Update README with notice and table
+      - name: Update readme with notice and table
         run: |
           TABLE="${{ steps.table.outputs.table }}"
-          CONTENT="$(cat README.md)"
+          CONTENT="$(cat readme.md)"
 
           NOTICE=$'\n> ### Disclaimer\n>\n> All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.\n> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.\n> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.\n> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.\n'
 
@@ -36,10 +36,10 @@ jobs:
             CONTENT="${CONTENT}${NOTICE}"
           fi
 
-          printf '%s\n\n---\n\n### Certificates\n\n%s\n' "$CONTENT" "$TABLE" > README.md
+          printf '%s\n\n---\n\n### Certificates\n\n%s\n' "$CONTENT" "$TABLE" > readme.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update certificates table from YAML"
-          file_pattern: README.md
+          file_pattern: readme.md
