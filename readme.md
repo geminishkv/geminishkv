@@ -3,20 +3,21 @@
   <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Team Lead</kbd></sup>
 </h1>
 
-  <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/AppSec-2448a2" alt="Application Security">
-  <img src="https://img.shields.io/badge/DevSecOps-2448a2" alt="DevSecOps">
-  <img src="https://img.shields.io/badge/Risk_Analysis-2448a2" alt="Risk Analysis">
-  <img src="https://img.shields.io/badge/Product_Management-2448a2" alt="Product Management">
-  <img src="https://img.shields.io/badge/STLC-2448a2" alt="STLC">
-  <img src="https://img.shields.io/badge/Contributor-%D0%A8%D0%BC%D0%B0%D0%BA%D0%BE%D0%B2__%D0%98._%D0%A1.-8b9aff" alt="Contributor: Шмаков И. С.">
+![AppSec](https://img.shields.io/badge/AppSec-2448a2)
+![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
+![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
+![Product Management](https://img.shields.io/badge/Product_Management-2448a2)
+![STLC](https://img.shields.io/badge/STLC-2448a2)
+![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
+[![Telegram blog](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
+
 
 </div>
 
 <br>Salut :wave:, </br>
-I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree from BMSTU.
+I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree from BMSTU. Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
-I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms. Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums
+I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
 
 ***
 
@@ -47,6 +48,39 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 ***
 
+### Statistics
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=geminishkv&theme=dark)
+![GitHub Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=dark&hide_border=true)
+![Top Languages](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&theme=dark&hide_border=true)
+
+
+
+
+![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&hide_border=true&custom_title=DevSecOps%20Stats)
+
+
+![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+
+![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv)
+
+![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&langs_count=8&theme=github_dark&hide_border=true&hide=html,css)
+
+[![Repo](https://github-readme-stats-tau-one-20.vercel.app/api/pin/?username=geminishkv&repo=oss_toolchainmap&theme=github_dark)](https://github.com/geminishkv/oss_toolchainmap)
+
+
+
+
+![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&hide_border=true&custom_title=DevSecOps%20Stats)
+
+![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&langs_count=8&theme=github_dark&hide_border=true&hide=html,css)
+
+![Streak](https://streak-stats.demolab.com?user=geminishkv&theme=github-dark-blue&hide_border=true)
+
+![Profile views](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat-square)
+
+***
+
 ### Links
 
 > * Podcast about secure development [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) and [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
@@ -56,7 +90,7 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 ***
 
-### Where to find me
+### Where to find me?
 
 - Telegram: [@geminishkv](https://t.me/geminishkv)
 - Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
