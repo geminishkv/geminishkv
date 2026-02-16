@@ -2,12 +2,13 @@ name: Build certs table
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
     paths:
       - 'certs.yaml'
 
 permissions:
-  contents: write  # Для git-auto-commit
+  contents: write
 
 jobs:
   build-table:
@@ -49,7 +50,7 @@ jobs:
 
           ---
 
-          ## Certificates
+          ### Certificates
 
           ${TABLE}
           EOF
