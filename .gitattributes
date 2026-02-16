@@ -14,7 +14,7 @@
 # *.vcxproj text eol=crlf
 # *.csproj text eol=crlf
 
-# Уже бинарные файлы (не трогать)
+# Уже бинарные файлы
 # *.png binary
 # *.jpg binary
 # *.jpeg binary

@@ -1,7 +1,6 @@
 <div align="center">
 
-  <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Team Lead</kbd></sup>
-</h1>
+  <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Team Lead</kbd></sup></h1>
 
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
@@ -39,11 +38,12 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 ***
 
 ### **Professional summary**
+
 * Leader with end‑to‑end experience building application security functions from scratch in enterprise and fintech environments
 * Designs and implements Secure SDLC with integrating SAST, SCA, DAST, container and secrets scanning into CI/CD pipeline, drives security champions programs and risk‑based remediation
 * Strong background in information security risk management and compliance (PCI DSS, critical infrastructure regulations, fintech standards, etc.), with proven ability to balance security and time‑to‑market
 
-*** 
+***
 
 ### Achivements
 
@@ -65,9 +65,17 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 ***
 
+## How I can help?
+
+* Design and roll out DevSecOps processes
+* Build AppSec Toolchain with focus on developer experience
+* Run threat modeling, risk analysis and security workshops for teams
+
+***
+
 ### Where to find me?
 
-- Telegram: [@geminishkv](https://t.me/geminishkv)
-- Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
+* Telegram: [@geminishkv](https://t.me/geminishkv)
+* Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
 
 ![Logo](artifacts/logotype/logo.jpg)
