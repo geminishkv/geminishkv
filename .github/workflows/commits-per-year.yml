@@ -35,11 +35,14 @@ jobs:
 
           token = os.environ["GH_PAT"]
           user = "geminishkv"
-          headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
+          headers = {
+              "Authorization": f"token {token}",
+              "Accept": "application/vnd.github.v3+json",
+          }
 
           def get_repos():
               repos = []
-              url = f"https://api.github.com/user/repos?per_page=100&type=owner"
+              url = "https://api.github.com/user/repos?per_page=100&type=owner"
               while url:
                   resp = requests.get(url, headers=headers)
                   resp.raise_for_status()
@@ -75,15 +78,17 @@ jobs:
           data = {
               "commits_2025": commits_2025,
               "commits_2026": commits_2026,
-              "updated": "2026-02-17"
+              "updated": "2026-02-17",
           }
+
           with open("commits.json", "w") as f:
               json.dump(data, f, indent=2)
+
           print(f"2025: {commits_2025} | 2026: {commits_2026} | Repos: {len(get_repos())}")
           EOF
 
       - name: Commit commits.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "📊 Update commits stats ({{ github.ref_name }})"
+          commit_message: "Update commits stats ({{ github.ref_name }})"
           file_pattern: commits.json
