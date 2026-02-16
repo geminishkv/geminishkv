@@ -13,49 +13,52 @@
 
 </div>
 
-<br>Салют :wave:, </br>
-Более 8 леn в сфере ИБ продуктовой разработки.
-Занимаюсь защищенносью CI/CD, внедрению процессов DevSecOps, Shift-Left, Risk Analysis.
+<br>Salut :wave:, </br>
+I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree from BMSTU.
 
-* MA Degree МГТУ им. Н. Э. Баумана
-* Принимал участие в безопасности продуктов для BI, E-commerce, Supply Chain, Cryptocurrency, а также Mobile GameDev
-* Проектирую и внедряю сервисы защищенности поставок кода, а также AppSec Toolchain механизмы
-* Обладаю успешным опытом управления и развития технологических проектов
-* Обладаю успешным опытом выстраивания процессов DevSecOps и результативных команд
-* Являюсь лидером сообщества [FinDevSecOps](https://findevsecops.ru) для fintech на рынке РФ
-* Преподаю курс по DevSecOps для [Security Champion](https://inseca.tech/security-champion-training)
-* Преподаю курс для [МФТИ](https://kiberbez-tech.ru/#contacts)
-* Преподаю в МГТУ им. Н.Э. Баумана на постоянной основе
-* Активный участник конференций, форумов в области ИБ
-* Веду практический [блог](https://t.me/shmakovis_appsec) и [тут](https://t.me/shmakovis_appsec/4) можно почитать обо мне
-
-> * Подкаст по безопасной разработке [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) и [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
-> * Интервью с ассоциацией BISA, на [YouTube](https://youtu.be/sPGhWWaWUdE) по безопасной разработке ПО
-> * Подготовил первый а РФ [хакатон по DevSecOps](https://t.me/fintechassociation/6261) и как [это было](https://t.me/shmakovis_appsec/16)
-> * Развиваю в сообществе [FinDevSecOps](https://findevsecops.ru) open-source [карту](https://storage.yandexcloud.net/aft-tilda/Карта%20инструментов%20DevSecOps.pdf) инструментов по AppSec Toolchain, учитывая решения для импортозамещения
+I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms. Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums
 
 ***
 
-### Специализация
+### **My focus on**
 
-* DevSecOps
-* DASA DevOps Product Owner
-* DevOps-инженер
-* AppSec-инженер
-* Business Information Security Officer
-* Information Security Architect
-
-### Компетенции
-
-* Application Security
-* Compliance/ Governance
-* Vulnerability Management
-* Software Testing Life Cycle
-* Supply Chain Management
-* TDD/ BDD
-* Orchestration
+- Secure SDLC & DevSecOps: Shift‑Left, automation AppSec practise on web, mobile, APIs, microservices and vulnerability management
+- Secure architecture review (web, mobile, APIs, microservices), security design for payment and crypto systems
+- Risk‑based security (risk assessment & vulnerability management) and secure architecture, threat modeling, supply‑chain security
+- Vulnerability Management, application architecture design, supply‑chain security
 
 ***
 
+### **Professional summary**
+-	Leader with end‑to‑end experience building application security functions from scratch in enterprise and fintech environments
+-	Designs and implements Secure SDLC with integrating SAST, SCA, DAST, container and secrets scanning into CI/CD pipeline, drives security champions programs and risk‑based remediation
+-	Strong background in information security risk management and compliance (PCI DSS, critical infrastructure regulations, fintech standards, etc.), with proven ability to balance security and time‑to‑market
+
+*** 
+
+### Achivements
+
+- Founder and lead of the [**FinDevSecOps**](findevsecops.ru) community for the Russian fintech market
+- Organiser of the first DevSecOps hackathon in Russia and continuing the series in 2026
+- Lecturer in secure software development and information security at leading technical universities:
+  - Bauman Moscow State University
+  - Moscow Institute of Physics and Technology
+- Author of articles and talks on DevSecOps, secure development, and practical AppSec
+
+***
+
+### Links
+
+> * Podcast about secure development [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) and [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
+> * Interview with BISA association on [YouTube](https://youtu.be/sPGhWWaWUdE) about secure software development
+> * Organized the first DevSecOps [hackathon in Russia](https://t.me/fintechassociation/6261) and [how it went](https://t.me/shmakovis_appsec/16)
+> * Developing an open-source [map](https://storage.yandexcloud.net/aft-tilda/Карта%20инструментов%20DevSecOps.pdf) of AppSec Toolchain tools in the [FinDevSecOps](https://findevsecops.ru) community, considering import substitution solutions
+
+***
+
+### Where to find me
+
+- Telegram: [@geminishkv](https://t.me/geminishkv)
+- Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
 
 ![Logo](artifacts/logotype/logo.jpg)
