@@ -27,16 +27,12 @@ jobs:
           CONTENT="$(cat README.md)"
 
           NOTICE=$(cat << 'EOF'
-          > ### Уведомление
+          > ### Disclaimer
           >
-          > ##### Вся информация в материалах данного профиля, включенных репозиториев (согласно применименым формулировкам GitHub), то есть любые текстовые, графические произведения, - рассматривается исключительно в ознакомительных целях
-          >
-          > ##### Любое использование представленной информации посредством данного профиля и/или любых текстовых, графических произведений в репозиториях, на практике без получения предварительного согласования на проведение тестирования у субьекта, подпадает под действие действующего законодательства
-          >
-          > ##### Автор не несет ответственности за любой возможный вред, причиненный предоставлемыми материалами, как любыми текстовыми, графическими произведениями
-          >
-          > ##### Любые текстовые, графические произведения, включая ссылки носят ознакомительный характер в цели поделиться знаниями в продуктовой безопасности
-          EOF
+          > ##### All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.          >
+          > ##### Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.          >
+          > ##### The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.          >
+          > ##### All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.          EOF
           )
 
           if ! grep -q "### Уведомление" <<< "$CONTENT"; then
