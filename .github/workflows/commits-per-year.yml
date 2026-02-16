@@ -79,7 +79,7 @@ jobs:
           }
           with open("commits.json", "w") as f:
               json.dump(data, f, indent=2)
-          print(f"✅ 2025: {commits_2025} | 2026: {commits_2026} | Repos: {len(get_repos())}")
+          print(f"2025: {commits_2025} | 2026: {commits_2026} | Repos: {len(get_repos())}")
           EOF
 
       - name: Commit commits.json
