@@ -1,0 +1,71 @@
+name: Update commits per year (all repos)
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # каждый день в 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Count commits for all repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: geminishkv
+        run: |
+          python - << 'EOF'
+          import os, json, subprocess, datetime, math
+
+          token = os.environ["GITHUB_TOKEN"]
+          user  = os.environ["GH_USER"]
+
+          def gh_api(path, extra_args=None):
+            cmd = ["gh", "api", path]
+            if extra_args:
+              cmd += extra_args
+            return subprocess.check_output(cmd, text=True)
+
+          # login gh cli
+          subprocess.run(["gh", "auth", "login", "--with-token"], input=token, text=True)
+
+          def list_repos():
+            out = gh_api(f"/users/{user}/repos", ["--paginate", "-q", ".[].name"])
+            return [line.strip() for line in out.splitlines() if line.strip()]
+
+          def count_commits(year):
+            since = f"{year}-01-01T00:00:00Z"
+            until = f"{year}-12-31T23:59:59Z"
+            total = 0
+            for repo in list_repos():
+              path = f"/repos/{user}/{repo}/commits"
+              out = gh_api(path, ["--paginate",
+                                  f"-Fsince={since}",
+                                  f"-Funtil={until}",
+                                  "-q", "length(.)"])
+              total += sum(int(x) for x in out.splitlines() if x.strip())
+            return total
+
+          commits_2025 = count_commits(2025)
+          commits_2026 = count_commits(2026)
+
+          data = {"commits_2025": commits_2025, "commits_2026": commits_2026}
+          with open("commits.json", "w", encoding="utf-8") as f:
+            json.dump(data, f)
+
+          EOF
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update yearly commits stats (all repos)"
+          file_pattern: commits.json
