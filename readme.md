@@ -4,7 +4,7 @@
 
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
-![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
+![Risk Analys](https://img.shields.io/badge/Risk_Analysis-2448a2)
 ![STLC](https://img.shields.io/badge/STLC-2448a2)
 ![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
