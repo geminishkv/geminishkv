@@ -137,15 +137,10 @@ jobs:
             CONTENT="${CONTENT}${NOTICE}"
           fi
 
-          # Если секция Certificates уже есть — обрезаем всё после неё
-          if grep -q "^### Certificates" readme.md; then
-            CONTENT="$(perl -0777 -pe 's/### Certificates[\\s\\S]*$//' readme.md)"
-            # Если при обрезке дисклеймер ушёл — вернём
-            if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then
-              CONTENT="${CONTENT}${NOTICE}"
-            fi
-          fi
+          # Всегда вырезаем старую секцию Certificates из CONTENT (если её нет — ничего не меняется)
+          CONTENT="$(printf '%s' "$CONTENT" | perl -0777 -pe 's/### Certificates[\\s\\S]*$//')"
 
+          # Собираем новый README с актуальной таблицей
           printf '%s\n\n---\n\n### Certificates\n\n%s\n' "$CONTENT" "$TABLE" > readme.md
 
       - name: Commit readme
