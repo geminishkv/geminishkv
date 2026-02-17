@@ -31,8 +31,8 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 <div align="center">
 
-![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&custom_title=DevSecOps%20Stats&show=reviews%hide_border=true%&size_weight=0.9&count_weight=1.5)
-![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&theme=github_dark&hide_border=true&langs_count=12&size_weight=0.9&count_weight=0.5)
+![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&custom_title=DevSecOps%20Stats&show=reviews%hide_border=true%&size_weight=1.5&count_weight=1.5)
+![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&theme=github_dark&hide_border=true&langs_count=12&size_weight=0.&count_weight=0.5)
 
 </div>
 
