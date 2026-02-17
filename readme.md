@@ -10,7 +10,7 @@
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
 ![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
 [![Telegram blog](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
-[![NFC Card](https://img.shields.io/badge/Digital%20business%20card%2Fgeminishkv-2448a2?logo=google-chrome&logoColor=white)](https://my.idot.vip/geminishkv)
+[![NFC Card](https://img.shields.io/badge/NFC%20card-2448a2?logo=google-chrome&logoColor=white)](https://my.idot.vip/geminishkv)
 
 </div>
 
