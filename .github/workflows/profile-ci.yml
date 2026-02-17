@@ -128,17 +128,24 @@ jobs:
       - name: Update readme
         run: |
           TABLE="${{ steps.table.outputs.table }}"
-          CONTENT="$(cat readme.md)"
-
-          NOTICE=$'\n> ### Disclaimer\n>\n> All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.\n> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.\n> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.\n> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.\n'
-
-          if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then
-            CONTENT="${CONTENT}${NOTICE}"
+          
+          if ! grep -qF "### Disclaimer" readme.md; then
+            printf '\n> ### Disclaimer\n>\n' >> readme.md
+            printf '> All information in this profile and the included repositories (according to GitHub'\''s applicable terminology), including any text and graphic works, is provided for informational purposes only.\n' >> readme.md
+            printf '> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.\n' >> readme.md
+            printf '> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.\n' >> readme.md
+            printf '> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.\n' >> readme.md
           fi
 
-          CONTENT="$(printf '%s' "$CONTENT" | perl -0777 -pe 's/<!-- CERTS-START -->[\\s\\S]*?<!-- CERTS-END -->/<!-- CERTS-START -->\n\n---\n\n### Certificates\n\n'"$TABLE"'\n\n<!-- CERTS-END -->/')"
+          if ! grep -q '<!-- CERTS-START -->' readme.md; then
+            printf '\n<!-- CERTS-START -->\n<!-- CERTS-END -->\n' >> readme.md
+          fi
 
-          printf '%s\n' "$CONTENT" > readme.md
+          awk '/<!-- CERTS-START -->/ {print; in_block=1; next} /<!-- CERTS-END -->/ {in_block=0; next} !in_block' readme.md > readme.tmp
+
+          printf '\n---\n\n### Certificates\n\n%s\n\n<!-- CERTS-END -->\n' "$TABLE" >> readme.tmp
+
+          mv readme.tmp readme.md
 
       - name: Commit readme
         uses: stefanzweifel/git-auto-commit-action@v5
