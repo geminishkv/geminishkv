@@ -9,8 +9,8 @@
 ![STLC](https://img.shields.io/badge/STLC-2448a2)
 ![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
 [![Telegram blog](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
-![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/profile/main/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
-![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/profile/main/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
+![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
+![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
 
 </div>
 
