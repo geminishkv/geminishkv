@@ -136,9 +136,9 @@ jobs:
             CONTENT="${CONTENT}${NOTICE}"
           fi
 
-          CONTENT="$(printf '%s' "$CONTENT" | perl -0777 -pe 's/### Certificates[\\s\\S]*$//')"
+          CONTENT="$(printf '%s' "$CONTENT" | perl -0777 -pe 's/<!-- CERTS-START -->[\\s\\S]*?<!-- CERTS-END -->/<!-- CERTS-START -->\n\n---\n\n### Certificates\n\n'"$TABLE"'\n\n<!-- CERTS-END -->/')"
 
-          printf '%s\n\n---\n\n### Certificates\n\n%s\n' "$CONTENT" "$TABLE" > readme.md
+          printf '%s\n' "$CONTENT" > readme.md
 
       - name: Commit readme
         uses: stefanzweifel/git-auto-commit-action@v5
