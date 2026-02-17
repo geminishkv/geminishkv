@@ -17,6 +17,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with remote
+        run: |
+          git config pull.rebase true
+          git pull origin master
 
       - name: Generate Markdown table from YAML
         id: table
@@ -32,10 +39,12 @@ jobs:
 
           NOTICE=$'\n> ### Disclaimer\n>\n> All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.\n> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.\n> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.\n> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.\n'
 
+          # Добавляем дисклеймер один раз
           if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then
             CONTENT="${CONTENT}${NOTICE}"
           fi
 
+          # Если секция Certificates уже есть — обрезаем всё после неё
           if grep -q "^### Certificates" readme.md; then
             CONTENT="$(perl -0777 -pe 's/### Certificates[\\s\\S]*$//' readme.md)"
             if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then

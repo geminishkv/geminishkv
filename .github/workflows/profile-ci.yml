@@ -1,4 +1,4 @@
-name: Update commits per year (all repos)
+name: Profile CI
 
 on:
   push:
@@ -18,6 +18,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with remote
+        run: |
+          git config pull.rebase true
+          git pull origin master
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -95,3 +102,54 @@ jobs:
         with:
           commit_message: "Update commits stats ({{ github.ref_name }})"
           file_pattern: commits.json
+
+  build-certs:
+    runs-on: ubuntu-latest
+    needs: update-commits
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with remote
+        run: |
+          git config pull.rebase true
+          git pull origin master
+
+      - name: Generate Markdown table from YAML
+        id: table
+        uses: gazab/create-markdown-table@v1
+        with:
+          file: ./certs.yaml
+          columns: '["ContentId","Area","PageTitle","MetaDescription"]'
+
+      - name: Update readme
+        run: |
+          TABLE="${{ steps.table.outputs.table }}"
+          CONTENT="$(cat readme.md)"
+
+          NOTICE=$'\n> ### Disclaimer\n>\n> All information in this profile and the included repositories (according to GitHub’s applicable terminology), including any text and graphic works, is provided for informational purposes only.\n> Any use of the information provided through this profile and/or any text or graphic works in the repositories in practice, without prior consent from the subject for conducting testing, falls under the scope of applicable law.\n> The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.\n> All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.\n'
+
+          # Добавляем дисклеймер один раз
+          if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then
+            CONTENT="${CONTENT}${NOTICE}"
+          fi
+
+          # Если секция Certificates уже есть — обрезаем всё после неё
+          if grep -q "^### Certificates" readme.md; then
+            CONTENT="$(perl -0777 -pe 's/### Certificates[\\s\\S]*$//' readme.md)"
+            # Если при обрезке дисклеймер ушёл — вернём
+            if ! grep -qF "### Disclaimer" <<< "$CONTENT"; then
+              CONTENT="${CONTENT}${NOTICE}"
+            fi
+          fi
+
+          printf '%s\n\n---\n\n### Certificates\n\n%s\n' "$CONTENT" "$TABLE" > readme.md
+
+      - name: Commit readme
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update certificates table from YAML"
+          file_pattern: readme.md
