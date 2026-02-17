@@ -186,3 +186,28 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 | INFOSEC-WEB | Informzashita | Web Application Security | Practical training in web application security testing, covering common vulnerabilities, secure coding principles, and approaches to protecting web services. |
 | OTUS-DEVSECOPS | Otus | Implementation and Work in DevSecOps | Deep-dive course on implementing DevSecOps in organizations, integrating security into CI/CD, automating checks, and aligning development, operations, and security teams. |
 
+---
+
+### Certificates
+
+| ContentId | Area | PageTitle | MetaDescription |
+| --- | --- | --- | --- |
+| UC-SPEC | Training Center Specialist, BMSTU | Team Lead in Software Development | Comprehensive program on building and leading software development teams, including planning, delegation, communication, conflict resolution, and performance management in IT projects. |
+| UC-SPEC-DEVOPS | Training Center Specialist, BMSTU | DevOps Engineer | Intensive course on DevOps engineering covering CI/CD pipelines, infrastructure as code, containerization, monitoring, and collaboration between development and operations teams. |
+| UC-SPEC-DASA-DEVOPS | Training Center Specialist, BMSTU | DASA DevOps Product Owner | Certification program focused on the role of a DevOps Product Owner, value delivery, backlog management, stakeholder communication, and aligning business goals with DevOps practices. |
+| UC-SPEC-DEVOPS-PRO | Training Center Specialist, BMSTU | Certificate DevOps Professional | Advanced DevOps professional training covering end-to-end delivery automation, environment management, reliability engineering, and scaling DevOps practices across teams. |
+| UC-SPEC-AGILE-SCRUM | Training Center Specialist, BMSTU | Agile - Scrum Management | Course on managing development processes using Agile and Scrum, including roles, ceremonies, artefacts, iterative planning, and continuous improvement in software teams. |
+| UC-SPEC-SCRUM-MASTER | Training Center Specialist, BMSTU | Scrum Master | Practical training for Scrum Masters on facilitating teams, removing impediments, coaching stakeholders, and ensuring effective use of Scrum in complex projects. |
+| UC-SPEC-SOFT-TEST | Training Center Specialist, BMSTU | Certificate Software Testing as QA Specialist | Fundamental and advanced software testing course covering test design techniques, test documentation, functional and non-functional testing, defect management, and QA processes. |
+| UC-SPEC-DASA-DEVOPS | Training Center Specialist, BMSTU | DASA: DevOps Practitioner for Team Organization | Hands-on DASA DevOps Practitioner program focused on team organization, culture change, collaboration patterns, and practical implementation of DevOps principles in organizations. |
+| UC-SPEC-QA-PROJECTS | Training Center Specialist, BMSTU | Quality Management in Projects and Services | Course on designing and implementing quality management systems for IT projects and services, including metrics, processes, audits, and continuous improvement practices. |
+| UC-SPEC-NET-ADMIN | Training Center Specialist, BMSTU | Administration of Services and Networks | Training on administration of network services and infrastructures, including configuration, troubleshooting, access control, monitoring, and ensuring availability in enterprise environments. |
+| UC-SPEC-SEC-SYSTEMS | Training Center Specialist, BMSTU | DevOps: Security of Systems, Services, and Networks | Course on integrating information security into systems, services, and network operations, covering threats, secure configuration, hardening, and DevSecOps security controls. |
+| UC-SPEC-ZABBIX | Training Center Specialist, BMSTU | Zabbix. Monitoring of Enterprise IT Infrastructure | Practical course on deploying and using Zabbix for enterprise IT infrastructure monitoring, including metrics collection, alerting, dashboards, and capacity planning. |
+| UC-SPEC-CLUSTERS | Training Center Specialist, BMSTU | Building Fault-Tolerant Cluster Solutions | Training on designing and implementing fault-tolerant cluster solutions with high availability, load balancing, redundancy, and disaster recovery strategies. |
+| UC-SPEC-CLUSTERS | Training Center Specialist, BMSTU | Azure Introduction | Introductory course on Microsoft Azure covering core cloud concepts, basic services, resource management, and foundational skills for working with Azure environments. |
+| CYBERED-OWASP | CyberED | Web Application Security and Threat Detection Practice Based on OWASP TOP 10 | Hands-on course in web application security focused on OWASP Top 10 risks, practical exploitation, detection techniques, and mitigation strategies for modern web apps. |
+| KASP-IS-ENTERPRISE | Kaspersky Academy | Enterprise Information Security | Program on building and managing enterprise information security, including risk assessment, policies, controls, incident response, and regulatory compliance. |
+| INFOSEC-WEB | Informzashita | Web Application Security | Practical training in web application security testing, covering common vulnerabilities, secure coding principles, and approaches to protecting web services. |
+| OTUS-DEVSECOPS | Otus | Implementation and Work in DevSecOps | Deep-dive course on implementing DevSecOps in organizations, integrating security into CI/CD, automating checks, and aligning development, operations, and security teams. |
+
