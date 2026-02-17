@@ -5,17 +5,18 @@
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
 ![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
-![Product Management](https://img.shields.io/badge/Product_Management-2448a2)
 ![STLC](https://img.shields.io/badge/STLC-2448a2)
 ![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
-[![Telegram blog](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
 ![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
+[![Telegram blog](https://img.shields.io/badge/Telegram-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
+[![NFC Card](https://img.shields.io/badge/Digital%20business%20card-my.idot.vip%2Fgeminishkv-2448a2?logo=google-chrome&logoColor=white)](https://my.idot.vip/geminishkv)
 
 </div>
 
 <br>Salut :wave:, </br>
-I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree from BMSTU. Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
+I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree at BMSTU. 
+Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
 I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
 
@@ -30,8 +31,8 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 <div align="center">
 
-![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&custom_title=DevSecOps%20Stats&show=reviews)
-![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&theme=github_dark&hide_border=true&langs_count=8&size_weight=0.7&count_weight=0.3)
+![Stats](https://github-readme-stats-tau-one-20.vercel.app/api?username=geminishkv&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&custom_title=DevSecOps%20Stats&show=reviews%hide_border=true%&size_weight=0.9&count_weight=1.5)
+![Top Langs](https://github-readme-stats-tau-one-20.vercel.app/api/top-langs/?username=geminishkv&layout=compact&theme=github_dark&hide_border=true&langs_count=12&size_weight=0.9&count_weight=0.5)
 
 </div>
 
@@ -47,6 +48,7 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 
 ### Achivements
 
+* Received a letter of appreciation from V. Selin for my substantial contribution to application security SAST activities in the FSTEC of Russia certification process under GOST 71207
 * Founder and lead of the [**FinDevSecOps**](findevsecops.ru) community for the Russian fintech market
 * Organiser of the first DevSecOps hackathon in Russia and continuing the series in 2026
 * Lecturer in secure software development and information security at leading technical universities:
