@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Team Lead</kbd></sup></h1>
+  <h1><a id="intro">geminishkv</a><sup><kbd>AppSec Teamlead</kbd></sup></h1>
 
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
