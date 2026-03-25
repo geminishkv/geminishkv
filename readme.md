@@ -16,6 +16,7 @@
 
 <br>Salut :wave:, </br>
 I'm Elijah Shmakov, Information Security Officer and  Application Security Teamlead. MA degree at BMSTU. 
+Official websute: [geminishkv.tech](geminishkv.tech)
 Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
 I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
