@@ -6,10 +6,8 @@
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
 ![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
 ![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
-<!-- COMMIT-BADGES-START -->
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
 ![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
-<!-- COMMIT-BADGES-END -->
 [![Website](https://img.shields.io/badge/geminishkv.tech-2448a2?logo=google-chrome&logoColor=white)](https://geminishkv.tech)
 [![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
 [![NFC Card](https://img.shields.io/badge/NFC%20card-2448a2?logo=nfc&logoColor=white)](https://my.idot.vip/geminishkv)
