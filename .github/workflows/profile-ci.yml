@@ -25,6 +25,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Check out the branch tip rather than the commit that triggered the run.
+          # Several pushes landing close together (merging a batch of Dependabot PRs,
+          # for instance) queue behind the concurrency group, and a run started from
+          # a stale commit cannot fast-forward when it finally pushes.
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Setup Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -199,6 +205,74 @@ jobs:
 
           python3 -c "import json,os;d=json.load(open(os.environ['RUNNER_TEMP']+'/site-data.json'));print('Synced: %d roles, %d projects, %d tool groups'%(len(d['experience']),len(d['projects']),len(d['toolGroups'])))"
 
+      - name: Render stats cards to committed SVGs
+        env:
+          # Own github-readme-stats instance. It is contacted once per run here
+          # instead of on every profile view, and the rendered SVGs are committed,
+          # so the profile keeps working even when the instance is down.
+          CARDS_BASE: https://github-readme-stats-tau-one-20.vercel.app
+          # Brand palette: black ground, gold titles, red icons.
+          BRAND: hide_border=true&bg_color=0a0a0a&title_color=d4a520&text_color=e6edf3&icon_color=cc2200&ring_color=d4a520
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/cards
+
+          fetch_card() {
+            local url="$1" dest="$2" tmp="${RUNNER_TEMP}/card.svg"
+            if curl -fsS --max-time 60 "$url" -o "$tmp" \
+               && [ -s "$tmp" ] && grep -qi '<svg' "$tmp"; then
+              mv "$tmp" "$dest"
+              echo "updated $dest ($(wc -c < "$dest") bytes)"
+            else
+              # Keeping the committed copy is the whole point of rendering ahead
+              # of time — a bad fetch must never blank the profile.
+              echo "::warning::could not refresh ${dest}, keeping the committed copy"
+            fi
+          }
+
+          # The two cards are sized to land within ~3% of each other (270 vs 279 px),
+          # so the readme can pin both to one height without visible rescaling.
+          fetch_card "${CARDS_BASE}/api?username=geminishkv&show_icons=true&count_private=true&include_all_commits=true&custom_title=AppSec%20%26%20DevSecOps%20Stats&show=reviews,prs_merged,prs_merged_percentage&${BRAND}" \
+            artifacts/cards/stats.svg
+
+          fetch_card "${CARDS_BASE}/api/top-langs/?username=geminishkv&layout=donut&langs_count=8&exclude_repo=DevSecOps_wiki&${BRAND}" \
+            artifacts/cards/top-langs.svg
+
+      - name: Collect Scorecard results
+        run: |
+          python3 - << 'EOF'
+          import json
+          import os
+          import pathlib
+
+          import requests
+
+          USER = "geminishkv"
+          SCORECARD = "https://api.scorecard.dev/projects/github.com/{}/{}"
+
+          site = json.loads(
+              pathlib.Path(os.environ["RUNNER_TEMP"], "site-data.json").read_text("utf-8")
+          )
+
+          def score(repo):
+              """The project's OpenSSF score, or None until its Scorecard workflow
+              has published a first run."""
+              try:
+                  resp = requests.get(SCORECARD.format(USER, repo), timeout=30)
+              except requests.RequestException:
+                  return None
+              if resp.status_code != 200:
+                  return None
+              return resp.json().get("score")
+
+          repos = {p["name"]: score(p["name"]) for p in site["projects"]}
+          pathlib.Path(os.environ["RUNNER_TEMP"], "posture.json").write_text(
+              json.dumps({"repos": repos}, indent=2), encoding="utf-8"
+          )
+          scored = sum(1 for v in repos.values() if v is not None)
+          print(f"Scorecard: {scored}/{len(repos)} repositories scored")
+          EOF
+
       - name: Generate Markdown table from YAML
         id: table
         uses: gazab/create-markdown-table@6686233d7008e8d8b9d4bbdbfd1fb1ae510019f0 # v1.0.7
@@ -228,6 +302,9 @@ jobs:
           site = json.loads(
               pathlib.Path(os.environ["RUNNER_TEMP"], "site-data.json").read_text("utf-8")
           )
+          posture = json.loads(
+              pathlib.Path(os.environ["RUNNER_TEMP"], "posture.json").read_text("utf-8")
+          )
           commits = json.loads(pathlib.Path("commits.json").read_text("utf-8"))
 
           def cell(text):
@@ -253,11 +330,23 @@ jobs:
               ],
           )
 
+          def scorecard_cell(repo):
+              """Links the score to its full OpenSSF report; an em dash until the
+              Scorecard workflow has published a first run for that repository."""
+              score = posture["repos"].get(repo)
+              if score is None:
+                  return "—"
+              url = f"https://scorecard.dev/viewer/?uri=github.com/geminishkv/{repo}"
+              return f"[{score:.1f}]({url})"
+
           projects = table(
-              ["Project", "Description", "Stack"],
+              ["Project", "Description", "Stack", "Scorecard"],
               [
-                  "| {} | {} | {} |".format(
-                      link(p["name"], p["url"]), cell(p["desc"]), cell(p["lang"])
+                  "| {} | {} | {} | {} |".format(
+                      link(p["name"], p["url"]),
+                      cell(p["desc"]),
+                      cell(p["lang"]),
+                      scorecard_cell(p["name"]),
                   )
                   for p in site["projects"]
               ],
@@ -294,22 +383,34 @@ jobs:
           readme = pathlib.Path("readme.md")
           content = readme.read_text(encoding="utf-8")
 
+          rendered, skipped = [], []
           for name, body in blocks.items():
               start, end = f"<!-- {name}-START -->", f"<!-- {name}-END -->"
               pattern = re.compile(
                   re.escape(start) + r".*?" + re.escape(end), re.DOTALL
               )
               if not pattern.search(content):
-                  raise SystemExit(f"Marker pair for {name} is missing from readme.md")
+                  # The readme is hand-edited too. A dropped marker pair means the
+                  # owner took that block over — say so loudly, but never fail the
+                  # run and never re-insert content they removed on purpose.
+                  print(f"::warning::no {name} marker pair in readme.md, block skipped")
+                  skipped.append(name)
+                  continue
               replacement = f"{start}\n{body}\n{end}"
               content = pattern.sub(lambda _: replacement, content, count=1)
+              rendered.append(name)
 
           readme.write_text(content, encoding="utf-8")
-          print("Rendered blocks: " + ", ".join(blocks))
+          print("Rendered blocks: " + (", ".join(rendered) or "none"))
+          if skipped:
+              print("Skipped blocks: " + ", ".join(skipped))
           EOF
+
+      - name: Rebase onto anything pushed while the job was running
+        run: git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
           commit_message: "chore: refresh commit stats and certificates (${{ github.ref_name }})"
-          file_pattern: 'commits.json readme.md'
+          file_pattern: 'commits.json readme.md artifacts/cards/*.svg'
