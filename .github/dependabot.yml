@@ -1,0 +1,10 @@
+version: 2
+updates:
+  # Actions are pinned to commit SHAs in the workflows; Dependabot keeps those
+  # pins current so the pinning does not silently freeze security fixes.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
