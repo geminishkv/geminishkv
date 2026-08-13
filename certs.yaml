@@ -8,7 +8,7 @@
     PageTitle: 'DevOps Engineer'
     MetaDescription: 'Intensive course on DevOps engineering covering CI/CD pipelines, infrastructure as code, containerization, monitoring, and collaboration between development and operations teams'
 
-  - ContentId: 'UC-SPEC-DASA-DEVOPS'
+  - ContentId: 'UC-SPEC-DASA-DEVOPS-PO'
     Area: 'Training Center "Specialist", BMSTU'
     PageTitle: 'DASA DevOps Product Owner'
     MetaDescription: 'Certification program focused on the role of a DevOps Product Owner, value delivery, backlog management, stakeholder communication, and aligning business goals with DevOps practices'
@@ -33,7 +33,7 @@
     PageTitle: 'Certificate Software Testing as QA Specialist'
     MetaDescription: 'Fundamental and advanced software testing course covering test design techniques, test documentation, functional and non-functional testing, defect management, and QA processes'
 
-  - ContentId: 'UC-SPEC-DASA-DEVOPS'
+  - ContentId: 'UC-SPEC-DASA-DEVOPS-PRACT'
     Area: 'Training Center "Specialist", BMSTU'
     PageTitle: 'DASA: DevOps Practitioner for Team Organization'
     MetaDescription: 'Hands-on DASA DevOps Practitioner program focused on team organization, culture change, collaboration patterns, and practical implementation of DevOps principles in organizations'
@@ -63,7 +63,7 @@
     PageTitle: 'Building Fault-Tolerant Cluster Solutions'
     MetaDescription: 'Training on designing and implementing fault-tolerant cluster solutions with high availability, load balancing, redundancy, and disaster recovery strategies'
 
-  - ContentId: 'UC-SPEC-CLUSTERS'
+  - ContentId: 'UC-SPEC-AZURE'
     Area: 'Training Center "Specialist", BMSTU'
     PageTitle: 'Azure Introduction'
     MetaDescription: 'Introductory course on Microsoft Azure covering core cloud concepts, basic services, resource management, and foundational skills for working with Azure environments'
