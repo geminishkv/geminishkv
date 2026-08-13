@@ -88,13 +88,13 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 ### Open-Source projects
 
 <!-- PROJECTS-START -->
-| Project | Description | Stack |
-| --- | --- | --- |
-| [oss_toolchainmap](https://github.com/geminishkv/oss_toolchainmap) | AppSec tools map — helps choose the optimal solution for any situation: no budget, no integration resources, no team. | Python |
-| [course_labs](https://github.com/geminishkv/course_labs) | Lab exercises for AppSec, Risk Analysis, Security Champion courses: Toolchain, Orchestration, CI/CD, UML and more. | Python |
-| [sbom_genform](https://github.com/geminishkv/sbom_genform) | CLI tool for generating and formatting SBOM (CycloneDX / SPDX) with CI/CD pipeline integration. | Python |
-| [semgrep_java_custom_ruleset](https://github.com/geminishkv/semgrep_java_custom_ruleset) | Custom Semgrep rules for Java based on OWASP TOP 10, wrapped in a Makefile for standalone execution. | Shell |
-| [geoip-tool](https://github.com/geminishkv/geoip-tool) | GeoIP-lookup mini-utility from the terminal and a Burp Suite plugin. Works via curl + jq without API keys. | Shell |
+| Project | Description | Stack | Scorecard |
+| --- | --- | --- | --- |
+| [oss_toolchainmap](https://github.com/geminishkv/oss_toolchainmap) | AppSec tools map — helps choose the optimal solution for any situation: no budget, no integration resources, no team. | Python | — |
+| [course_labs](https://github.com/geminishkv/course_labs) | Lab exercises for AppSec, Risk Analysis, Security Champion courses: Toolchain, Orchestration, CI/CD, UML and more. | Python | — |
+| [sbom_genform](https://github.com/geminishkv/sbom_genform) | CLI tool for generating and formatting SBOM (CycloneDX / SPDX) with CI/CD pipeline integration. | Python | [4.0](https://scorecard.dev/viewer/?uri=github.com/geminishkv/sbom_genform) |
+| [semgrep_java_custom_ruleset](https://github.com/geminishkv/semgrep_java_custom_ruleset) | Custom Semgrep rules for Java based on OWASP TOP 10, wrapped in a Makefile for standalone execution. | Shell | — |
+| [geoip-tool](https://github.com/geminishkv/geoip-tool) | GeoIP-lookup mini-utility from the terminal and a Burp Suite plugin. Works via curl + jq without API keys. | Shell | — |
 <!-- PROJECTS-END -->
 
 Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](https://hub.docker.com/u/geminishkvdev) · [PyPI](https://pypi.org/user/geminishkv)
