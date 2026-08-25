@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">AppSec &#38; DevSecOps Stats, Rank: B+</title>
-        <desc id="descId">Total Stars Earned: 42, Total Commits  : 2455, Total PRs: 55, Total PRs Merged: 47, Merged PRs Percentage: 85.45, Total PRs Reviewed: 59, Total Issues: 6, Contributed to (last year): 13</desc>
+        <desc id="descId">Total Stars Earned: 42, Total Commits  : 2476, Total PRs: 56, Total PRs Merged: 47, Merged PRs Percentage: 83.93, Total PRs Reviewed: 59, Total Issues: 6, Contributed to (last year): 14</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 111.85155761483523;
+        stroke-dashoffset: 111.33761475011306;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >55</text>
+      >56</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >85.45 %</text>
+      >83.93 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
@@ -267,7 +267,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >13</text>
+      >14</text>
     </g>
   </g>
     </svg>
