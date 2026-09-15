@@ -21,7 +21,6 @@ Temporary Items
 
 ### macOS Patch ###
 # iCloud generated files
-*.icloud
 
 # OS generated files #
 ######################
@@ -59,7 +58,6 @@ Temporary Items
 
 ### macOS Patch ###
 # iCloud generated files
-*.icloud
 
 # Compiled source #
 ###################
@@ -88,3 +86,8 @@ Temporary Items
 *.log
 *.sql
 *.sqlite
+
+# iCloud Drive: conflict copies ("cli 2.py", "sbom 2/", also 3..9) and evicted-file stubs
+* [2-9]
+* [2-9].*
+*.icloud
