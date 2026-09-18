@@ -5,11 +5,9 @@
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
 ![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
-![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
-<!-- COMMIT-BADGES-START -->
+![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat) <!-- COMMIT-BADGES-START -->
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
-![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
-<!-- COMMIT-BADGES-END -->
+![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300) <!-- COMMIT-BADGES-END -->
 [![Website](https://img.shields.io/badge/geminishkv.tech-2448a2?logo=google-chrome&logoColor=white)](https://geminishkv.tech)
 [![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/appsecta)
 [![NFC Card](https://img.shields.io/badge/NFC%20card-2448a2?logo=nfc&logoColor=white)](https://my.idot.vip/geminishkv)
@@ -23,6 +21,14 @@ Official website: **[geminishkv.tech](https://geminishkv.tech)**.
 Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
 I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
+
+### Now
+
+<!-- NOW-START -->
+* [Teaching AppSec at BMSTU — the 2026/27 cohort started on September 1](https://course.geminishkv.tech/)
+* [@appsecta channel — new posts every week](https://t.me/appsecta)
+* [Guardconf — come to the conference](https://t.me/appsecta/515)
+<!-- NOW-END -->
 
 ***
 
@@ -62,17 +68,17 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 <!-- EXPERIENCE-FLOW-START -->
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
-flowchart TB
+flowchart LR
     accTitle: Career pipeline
-    accDescr: Roles from the first one at the top to the current one at the bottom, the same pipeline as on geminishkv.tech.
+    accDescr: Roles from the first one on the left to the current one on the right, the same pipeline as on geminishkv.tech.
 
-    role_1["Weter IT<br/>Senior IS Specialist<br/>Apr 2019 — Jan 2020"]
-    role_2["Poly Play Inc<br/>Senior IS Specialist<br/>(Lead)<br/>Jan 2020 — Dec 2020"]
-    role_3["SUNLIGHT<br/>Deputy Director of<br/>Information Security<br/>Dec 2020 — Aug 2021"]
-    role_4["EMCD Tech<br/>Chief Information<br/>Security Officer<br/>Jan 2022 — Jul 2022"]
-    role_5["Rosbank / TBank<br/>Deputy Head of IS Risk<br/>Department<br/>Jun 2022 — Dec 2024"]
-    role_6["LANIT<br/>AppSec Team Lead<br/>Dec 2024 — Jul 2026"]
-    role_7(["SberSpasibo<br/>AppSec Team Lead<br/>Aug 2026 — present"])
+    role_1["Weter IT<br/>Senior IS<br/>Specialist<br/>2019–2020"]
+    role_2["Poly Play Inc<br/>Senior IS<br/>Specialist<br/>(Lead)<br/>2020"]
+    role_3["SUNLIGHT<br/>Deputy<br/>Director of<br/>Information<br/>Security<br/>2020–2021"]
+    role_4["EMCD Tech<br/>Chief<br/>Information<br/>Security<br/>Officer<br/>2022"]
+    role_5["Rosbank /<br/>TBank<br/>Deputy Head of<br/>IS Risk<br/>Department<br/>2022–2024"]
+    role_6["LANIT<br/>AppSec Team<br/>Lead<br/>2024–2026"]
+    role_7(["SberSpasibo<br/>AppSec Team<br/>Lead<br/>2026–now"])
 
     role_1 --> role_2
     role_2 --> role_3

@@ -184,6 +184,7 @@ jobs:
                 ? e.logos.map((l) => ({ name: l.alt, url: l.url }))
                 : [{ name: e.company, url: e.url }],
             })),
+            now: en.now.items.map((i) => ({ text: i.text, href: i.href })),
             projects: en.projects.map((p) => ({
               name: p.name, desc: p.desc, lang: p.lang, url: p.url,
             })),
@@ -204,7 +205,7 @@ jobs:
             "${RUNNER_TEMP}/translations.js" \
             "${RUNNER_TEMP}/Tools.js" > "${RUNNER_TEMP}/site-data.json"
 
-          python3 -c "import json,os;d=json.load(open(os.environ['RUNNER_TEMP']+'/site-data.json'));print('Synced: %d roles, %d projects, %d tool groups'%(len(d['experience']),len(d['projects']),len(d['toolGroups'])))"
+          python3 -c "import json,os;d=json.load(open(os.environ['RUNNER_TEMP']+'/site-data.json'));print('Synced: %d roles, %d projects, %d tool groups, %d now items'%(len(d['experience']),len(d['projects']),len(d['toolGroups']),len(d['now'])))"
 
       - name: Render stats cards to committed SVGs
         env:
@@ -377,17 +378,27 @@ jobs:
                       current = f"{current} {word}".strip()
               return "<br/>".join([*lines, current])
 
+          def years(period):
+              """'Apr 2019 — Jan 2020' -> '2019–2020', an open period ends with 'now'."""
+              found = re.findall(r"\d{4}", period)
+              if not found:
+                  return period
+              end = "now" if re.search(r"present|now", period, re.IGNORECASE) else found[-1]
+              return found[0] if end == found[0] else f"{found[0]}–{end}"
+
           def experience_flow(roles):
-              """The career pipeline of geminishkv.tech as a flowchart: oldest role on
-              top, the current one closes the chain. Notation follows ISO 5807."""
+              """The career pipeline of geminishkv.tech: first role on the left, the
+              current one closes the line on the right. Left to right on purpose, it
+              is a conveyor like the ones on the sites; labels are kept narrow because
+              GitHub scales a wide diagram down to the readme width."""
               ordered = list(reversed(roles))
               nodes, edges = [], []
               for number, role in enumerate(ordered, 1):
                   label = "<br/>".join(
                       [
-                          wrap(" / ".join(company["name"] for company in role["companies"])),
-                          wrap(role["role"]),
-                          wrap(role["period"]),
+                          wrap(" / ".join(company["name"] for company in role["companies"]), 14),
+                          wrap(role["role"], 14),
+                          years(role["period"]),
                       ]
                   )
                   last = number == len(ordered)
@@ -400,9 +411,9 @@ jobs:
                   [
                       "```mermaid",
                       '%%{init: {"flowchart": {"curve": "step"}}}%%',
-                      "flowchart TB",
+                      "flowchart LR",
                       "    accTitle: Career pipeline",
-                      "    accDescr: Roles from the first one at the top to the current one at the bottom, the same pipeline as on geminishkv.tech.",
+                      "    accDescr: Roles from the first one on the left to the current one on the right, the same pipeline as on geminishkv.tech.",
                       "",
                       *nodes,
                       "",
@@ -419,6 +430,8 @@ jobs:
 
           flow = experience_flow(site["experience"])
 
+          now = "\n".join(f"* [{cell(item['text'])}]({item['href']})" for item in site["now"])
+
           # Badge labels carry the year, so they are regenerated from commits.json
           # instead of being hardcoded — nothing to edit every January.
           years = sorted(
@@ -431,8 +444,11 @@ jobs:
               for y in years
           )
 
+          INLINE = {"COMMIT-BADGES"}
+
           blocks = {
               "COMMIT-BADGES": badges,
+              "NOW": now,
               "EXPERIENCE-FLOW": flow,
               "EXPERIENCE": experience,
               "PROJECTS": projects,
@@ -456,7 +472,13 @@ jobs:
                   print(f"::warning::no {name} marker pair in readme.md, block skipped")
                   skipped.append(name)
                   continue
-              replacement = f"{start}\n{body}\n{end}"
+              if name in INLINE:
+                  # A marker on a line of its own starts an HTML block and splits the
+                  # paragraph, so the badge row breaks into three. Here the opening
+                  # marker ends the previous line and the closing one ends the last.
+                  replacement = f"{start}\n{body} {end}"
+              else:
+                  replacement = f"{start}\n{body}\n{end}"
               content = pattern.sub(lambda _: replacement, content, count=1)
               rendered.append(name)
 
