@@ -16,11 +16,15 @@
 
 Salute :wave:
 
-I'm Elijah Shmakov, Information Security Officer and Application Security Team Lead. MA degree at BMSTU.
+I'm Elijah Shmakov, Application Security Team Lead. MA degree at BMSTU.
 Official website: **[geminishkv.tech](https://geminishkv.tech)**.
-Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
-I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
+<!-- INTRO-START -->
+* I build AppSec and DevSecOps pipelines, grow the Security Champions guild and advocate risk analysis
+* I teach secure development at BMSTU and MIPT
+* Received a letter of appreciation from V. Selin for a significant contribution to GOST 71207 (SAST) in cooperation with FSTEC of Russia
+* Lead of the FinDevSecOps community for the Russian fintech market
+<!-- INTRO-END -->
 
 ### Now
 

@@ -184,6 +184,7 @@ jobs:
                 ? e.logos.map((l) => ({ name: l.alt, url: l.url }))
                 : [{ name: e.company, url: e.url }],
             })),
+            lead: en.hero.leadItems,
             now: en.now.items.map((i) => ({ text: i.text, href: i.href })),
             projects: en.projects.map((p) => ({
               name: p.name, desc: p.desc, lang: p.lang, url: p.url,
@@ -430,6 +431,8 @@ jobs:
 
           flow = experience_flow(site["experience"])
 
+          intro = "\n".join(f"* {item}" for item in site["lead"])
+
           now = "\n".join(f"* [{cell(item['text'])}]({item['href']})" for item in site["now"])
 
           # Badge labels carry the year, so they are regenerated from commits.json
@@ -448,6 +451,7 @@ jobs:
 
           blocks = {
               "COMMIT-BADGES": badges,
+              "INTRO": intro,
               "NOW": now,
               "EXPERIENCE-FLOW": flow,
               "EXPERIENCE": experience,
