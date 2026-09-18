@@ -5,22 +5,34 @@
 ![AppSec](https://img.shields.io/badge/AppSec-2448a2)
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
 ![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
-![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
+![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat) <!-- COMMIT-BADGES-START -->
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
-![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
+![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300) <!-- COMMIT-BADGES-END -->
 [![Website](https://img.shields.io/badge/geminishkv.tech-2448a2?logo=google-chrome&logoColor=white)](https://geminishkv.tech)
-[![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
+[![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/appsecta)
 [![NFC Card](https://img.shields.io/badge/NFC%20card-2448a2?logo=nfc&logoColor=white)](https://my.idot.vip/geminishkv)
 
 </div>
 
 Salute :wave:
 
-I'm Elijah Shmakov, Information Security Officer and Application Security Team Lead. MA degree at BMSTU.
+I'm Elijah Shmakov, Application Security Team Lead. MA degree at BMSTU.
 Official website: **[geminishkv.tech](https://geminishkv.tech)**.
-Participated in securing products for BI, E-commerce, Supply Chain, Cryptocurrency, and Mobile GameDev. Active participant in InfoSec conferences and forums.
 
-I build and scale Application Security and DevSecOps practices for fintech, integrators and high‑load platforms – from zero to production‑ready services. Design and implement code supply security services, as well as AppSec Toolchain mechanisms.
+<!-- INTRO-START -->
+* I build AppSec and DevSecOps pipelines, grow the Security Champions guild and advocate risk analysis
+* I teach secure development at BMSTU and MIPT
+* Received a letter of appreciation from V. Selin for a significant contribution to GOST 71207 (SAST) in cooperation with FSTEC of Russia
+* Lead of the FinDevSecOps community for the Russian fintech market
+<!-- INTRO-END -->
+
+### Now
+
+<!-- NOW-START -->
+* [Teaching AppSec at BMSTU — the 2026/27 cohort started on September 1](https://course.geminishkv.tech/)
+* [@appsecta channel — new posts every week](https://t.me/appsecta)
+* [Guardconf — come to the conference](https://t.me/appsecta/515)
+<!-- NOW-END -->
 
 ***
 
@@ -56,6 +68,36 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 ***
 
 ### Experience
+
+<!-- EXPERIENCE-FLOW-START -->
+```mermaid
+%%{init: {"flowchart": {"curve": "step"}}}%%
+flowchart LR
+    accTitle: Career pipeline
+    accDescr: Roles from the first one on the left to the current one on the right, the same pipeline as on geminishkv.tech.
+
+    role_1["Weter IT<br/>Senior IS<br/>Specialist<br/>2019–2020"]
+    role_2["Poly Play Inc<br/>Senior IS<br/>Specialist<br/>(Lead)<br/>2020"]
+    role_3["SUNLIGHT<br/>Deputy<br/>Director of<br/>Information<br/>Security<br/>2020–2021"]
+    role_4["EMCD Tech<br/>Chief<br/>Information<br/>Security<br/>Officer<br/>2022"]
+    role_5["Rosbank /<br/>TBank<br/>Deputy Head of<br/>IS Risk<br/>Department<br/>2022–2024"]
+    role_6["LANIT<br/>AppSec Team<br/>Lead<br/>2024–2026"]
+    role_7(["SberSpasibo<br/>AppSec Team<br/>Lead<br/>2026–now"])
+
+    role_1 --> role_2
+    role_2 --> role_3
+    role_3 --> role_4
+    role_4 --> role_5
+    role_5 --> role_6
+    role_6 --> role_7
+
+    classDef stage fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
+    classDef done fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+
+    class role_1,role_2,role_3,role_4,role_5,role_6 stage
+    class role_7 done
+```
+<!-- EXPERIENCE-FLOW-END -->
 
 <!-- EXPERIENCE-START -->
 | Period | Company | Role |
@@ -120,7 +162,7 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 
 > * Podcast about secure development on [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) and [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
 > * Interview with the BISA association on [YouTube](https://youtu.be/sPGhWWaWUdE) about secure software development
-> * Organized the first DevSecOps [hackathon in Russia](https://t.me/fintechassociation/6261) and [how it went](https://t.me/shmakovis_appsec/16)
+> * Organized the first DevSecOps [hackathon in Russia](https://t.me/fintechassociation/6261) and [how it went](https://t.me/appsecta/16)
 > * [AppSec course](https://course.geminishkv.tech/) and [DevSecOps course at MIPT](https://kiberbez-tech.ru)
 > * [Security Champion training](https://inseca.tech/security-champion-training)
 > * Open-source [AppSec Toolchain map](https://findevsecops.github.io/oss_toolchainmap/pdf_table/tools-map.pdf) built in the [FinDevSecOps](https://findevsecops.ru) community, with a focus on import‑substitution solutions
@@ -140,7 +182,7 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 
 * Website: [geminishkv.tech](https://geminishkv.tech) · [blog](https://geminishkv.tech/blog/)
 * Telegram: [@geminishkv](https://t.me/geminishkv)
-* Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
+* Blog (ru): [AppSecTA](https://t.me/appsecta)
 * Email: [shmakovis@inbox.ru](mailto:shmakovis@inbox.ru)
 * LinkedIn: [geminishkvdev](https://www.linkedin.com/in/geminishkvdev/)
 
@@ -153,11 +195,11 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 > The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.
 > All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.
 
----
+***
 
 <!-- CERTS-START -->
 
----
+***
 
 ### Certificates
 

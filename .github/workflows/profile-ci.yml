@@ -37,8 +37,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install requests
-        run: pip install --disable-pip-version-check requests
+      - name: Install Python dependencies
+        # Pinned: an unpinned install changes under the pipeline without a commit.
+        run: pip install --disable-pip-version-check requests==2.34.2 pyyaml==6.0.3
 
       - name: Count commits across own repositories
         env:
@@ -183,6 +184,8 @@ jobs:
                 ? e.logos.map((l) => ({ name: l.alt, url: l.url }))
                 : [{ name: e.company, url: e.url }],
             })),
+            lead: en.hero.leadItems,
+            now: en.now.items.map((i) => ({ text: i.text, href: i.href })),
             projects: en.projects.map((p) => ({
               name: p.name, desc: p.desc, lang: p.lang, url: p.url,
             })),
@@ -203,7 +206,7 @@ jobs:
             "${RUNNER_TEMP}/translations.js" \
             "${RUNNER_TEMP}/Tools.js" > "${RUNNER_TEMP}/site-data.json"
 
-          python3 -c "import json,os;d=json.load(open(os.environ['RUNNER_TEMP']+'/site-data.json'));print('Synced: %d roles, %d projects, %d tool groups'%(len(d['experience']),len(d['projects']),len(d['toolGroups'])))"
+          python3 -c "import json,os;d=json.load(open(os.environ['RUNNER_TEMP']+'/site-data.json'));print('Synced: %d roles, %d projects, %d tool groups, %d now items'%(len(d['experience']),len(d['projects']),len(d['toolGroups']),len(d['now'])))"
 
       - name: Render stats cards to committed SVGs
         env:
@@ -273,17 +276,7 @@ jobs:
           print(f"Scorecard: {scored}/{len(repos)} repositories scored")
           EOF
 
-      - name: Generate Markdown table from YAML
-        id: table
-        uses: gazab/create-markdown-table@6686233d7008e8d8b9d4bbdbfd1fb1ae510019f0 # v1.0.7
-        with:
-          file: ./certs.yaml
-          columns: '["ContentId","Area","PageTitle","MetaDescription"]'
-
       - name: Render generated blocks in readme
-        env:
-          # Passed through the environment, never interpolated into the shell.
-          TABLE: ${{ steps.table.outputs.table }}
         run: |
           python3 - << 'EOF'
           import json
@@ -291,13 +284,11 @@ jobs:
           import pathlib
           import re
 
+          import yaml
+
           COMMITS_JSON = (
               "https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json"
           )
-
-          certs_table = os.environ["TABLE"].strip()
-          if not certs_table:
-              raise SystemExit("Generated certificates table is empty — check certs.yaml")
 
           site = json.loads(
               pathlib.Path(os.environ["RUNNER_TEMP"], "site-data.json").read_text("utf-8")
@@ -360,6 +351,90 @@ jobs:
               ],
           )
 
+          # The certificates table used to come from a third-party action that runs
+          # on Node 20 and relies on the deprecated set-output command. It is a plain
+          # table, so it is built here with the same helpers as the other blocks.
+          CERT_COLUMNS = ["ContentId", "Area", "PageTitle", "MetaDescription"]
+          certs = yaml.safe_load(pathlib.Path("certs.yaml").read_text("utf-8")) or []
+          if not certs:
+              raise SystemExit("certs.yaml has no entries — the certificates table would be empty")
+          for number, cert in enumerate(certs, 1):
+              absent = [column for column in CERT_COLUMNS if not cert.get(column)]
+              if absent:
+                  raise SystemExit(f"certs.yaml entry {number} lacks {', '.join(absent)}")
+          certs_table = table(
+              CERT_COLUMNS,
+              ["| " + " | ".join(cell(cert[column]) for column in CERT_COLUMNS) + " |" for cert in certs],
+          )
+
+          def wrap(text, width=24):
+              """Mermaid re-wraps long label lines on its own and inflates the shape,
+              so lines are broken here."""
+              lines, current = [], ""
+              for word in str(text).replace('"', "'").split():
+                  if current and len(current) + 1 + len(word) > width:
+                      lines.append(current)
+                      current = word
+                  else:
+                      current = f"{current} {word}".strip()
+              return "<br/>".join([*lines, current])
+
+          def years(period):
+              """'Apr 2019 — Jan 2020' -> '2019–2020', an open period ends with 'now'."""
+              found = re.findall(r"\d{4}", period)
+              if not found:
+                  return period
+              end = "now" if re.search(r"present|now", period, re.IGNORECASE) else found[-1]
+              return found[0] if end == found[0] else f"{found[0]}–{end}"
+
+          def experience_flow(roles):
+              """The career pipeline of geminishkv.tech: first role on the left, the
+              current one closes the line on the right. Left to right on purpose, it
+              is a conveyor like the ones on the sites; labels are kept narrow because
+              GitHub scales a wide diagram down to the readme width."""
+              ordered = list(reversed(roles))
+              nodes, edges = [], []
+              for number, role in enumerate(ordered, 1):
+                  label = "<br/>".join(
+                      [
+                          wrap(" / ".join(company["name"] for company in role["companies"]), 14),
+                          wrap(role["role"], 14),
+                          years(role["period"]),
+                      ]
+                  )
+                  last = number == len(ordered)
+                  shape = '(["{}"])' if last else '["{}"]'
+                  nodes.append(f"    role_{number}" + shape.format(label))
+                  if number > 1:
+                      edges.append(f"    role_{number - 1} --> role_{number}")
+              past = ",".join(f"role_{n}" for n in range(1, len(ordered)))
+              return "\n".join(
+                  [
+                      "```mermaid",
+                      '%%{init: {"flowchart": {"curve": "step"}}}%%',
+                      "flowchart LR",
+                      "    accTitle: Career pipeline",
+                      "    accDescr: Roles from the first one on the left to the current one on the right, the same pipeline as on geminishkv.tech.",
+                      "",
+                      *nodes,
+                      "",
+                      *edges,
+                      "",
+                      "    classDef stage fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f",
+                      "    classDef done fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d",
+                      "",
+                      f"    class {past} stage",
+                      f"    class role_{len(ordered)} done",
+                      "```",
+                  ]
+              )
+
+          flow = experience_flow(site["experience"])
+
+          intro = "\n".join(f"* {item}" for item in site["lead"])
+
+          now = "\n".join(f"* [{cell(item['text'])}]({item['href']})" for item in site["now"])
+
           # Badge labels carry the year, so they are regenerated from commits.json
           # instead of being hardcoded — nothing to edit every January.
           years = sorted(
@@ -372,12 +447,17 @@ jobs:
               for y in years
           )
 
+          INLINE = {"COMMIT-BADGES"}
+
           blocks = {
               "COMMIT-BADGES": badges,
+              "INTRO": intro,
+              "NOW": now,
+              "EXPERIENCE-FLOW": flow,
               "EXPERIENCE": experience,
               "PROJECTS": projects,
               "TOOLCHAIN": toolchain,
-              "CERTS": f"\n---\n\n### Certificates\n\n{certs_table}\n",
+              "CERTS": f"\n***\n\n### Certificates\n\n{certs_table}\n",
           }
 
           readme = pathlib.Path("readme.md")
@@ -396,7 +476,13 @@ jobs:
                   print(f"::warning::no {name} marker pair in readme.md, block skipped")
                   skipped.append(name)
                   continue
-              replacement = f"{start}\n{body}\n{end}"
+              if name in INLINE:
+                  # A marker on a line of its own starts an HTML block and splits the
+                  # paragraph, so the badge row breaks into three. Here the opening
+                  # marker ends the previous line and the closing one ends the last.
+                  replacement = f"{start}\n{body} {end}"
+              else:
+                  replacement = f"{start}\n{body}\n{end}"
               content = pattern.sub(lambda _: replacement, content, count=1)
               rendered.append(name)
 
