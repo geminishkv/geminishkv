@@ -6,10 +6,12 @@
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-2448a2)
 ![Risk Analysis](https://img.shields.io/badge/Risk_Analysis-2448a2)
 ![Visitors](https://komarev.com/ghpvc/?username=geminishkv&label=Profile%20views&color=0e75b6&style=flat)
+<!-- COMMIT-BADGES-START -->
 ![Commits 2025](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202025&query=commits_2025&color=2448a2&cacheSeconds=300)
 ![Commits 2026](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json&label=Commits%202026&query=commits_2026&color=2448a2&cacheSeconds=300)
+<!-- COMMIT-BADGES-END -->
 [![Website](https://img.shields.io/badge/geminishkv.tech-2448a2?logo=google-chrome&logoColor=white)](https://geminishkv.tech)
-[![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/shmakovis_appsec)
+[![Telegram blog](https://img.shields.io/badge/AppSecTA-Channel-26A5E4?logo=telegram&logoColor=white)](https://t.me/appsecta)
 [![NFC Card](https://img.shields.io/badge/NFC%20card-2448a2?logo=nfc&logoColor=white)](https://my.idot.vip/geminishkv)
 
 </div>
@@ -56,6 +58,36 @@ I build and scale Application Security and DevSecOps practices for fintech, inte
 ***
 
 ### Experience
+
+<!-- EXPERIENCE-FLOW-START -->
+```mermaid
+%%{init: {"flowchart": {"curve": "step"}}}%%
+flowchart TB
+    accTitle: Career pipeline
+    accDescr: Roles from the first one at the top to the current one at the bottom, the same pipeline as on geminishkv.tech.
+
+    role_1["Weter IT<br/>Senior IS Specialist<br/>Apr 2019 — Jan 2020"]
+    role_2["Poly Play Inc<br/>Senior IS Specialist<br/>(Lead)<br/>Jan 2020 — Dec 2020"]
+    role_3["SUNLIGHT<br/>Deputy Director of<br/>Information Security<br/>Dec 2020 — Aug 2021"]
+    role_4["EMCD Tech<br/>Chief Information<br/>Security Officer<br/>Jan 2022 — Jul 2022"]
+    role_5["Rosbank / TBank<br/>Deputy Head of IS Risk<br/>Department<br/>Jun 2022 — Dec 2024"]
+    role_6["LANIT<br/>AppSec Team Lead<br/>Dec 2024 — Jul 2026"]
+    role_7(["SberSpasibo<br/>AppSec Team Lead<br/>Aug 2026 — present"])
+
+    role_1 --> role_2
+    role_2 --> role_3
+    role_3 --> role_4
+    role_4 --> role_5
+    role_5 --> role_6
+    role_6 --> role_7
+
+    classDef stage fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
+    classDef done fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+
+    class role_1,role_2,role_3,role_4,role_5,role_6 stage
+    class role_7 done
+```
+<!-- EXPERIENCE-FLOW-END -->
 
 <!-- EXPERIENCE-START -->
 | Period | Company | Role |
@@ -120,7 +152,7 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 
 > * Podcast about secure development on [Podster](https://podster.fm/podcasts/bezopasnyyvykhod/e/375805/bezopasnaya-razrabotka-devsecops) and [YouTube](https://www.youtube.com/watch?v=LifFzjdvGTc)
 > * Interview with the BISA association on [YouTube](https://youtu.be/sPGhWWaWUdE) about secure software development
-> * Organized the first DevSecOps [hackathon in Russia](https://t.me/fintechassociation/6261) and [how it went](https://t.me/shmakovis_appsec/16)
+> * Organized the first DevSecOps [hackathon in Russia](https://t.me/fintechassociation/6261) and [how it went](https://t.me/appsecta/16)
 > * [AppSec course](https://course.geminishkv.tech/) and [DevSecOps course at MIPT](https://kiberbez-tech.ru)
 > * [Security Champion training](https://inseca.tech/security-champion-training)
 > * Open-source [AppSec Toolchain map](https://findevsecops.github.io/oss_toolchainmap/pdf_table/tools-map.pdf) built in the [FinDevSecOps](https://findevsecops.ru) community, with a focus on import‑substitution solutions
@@ -140,7 +172,7 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 
 * Website: [geminishkv.tech](https://geminishkv.tech) · [blog](https://geminishkv.tech/blog/)
 * Telegram: [@geminishkv](https://t.me/geminishkv)
-* Blog (ru): [AppSecTA](https://t.me/shmakovis_appsec)
+* Blog (ru): [AppSecTA](https://t.me/appsecta)
 * Email: [shmakovis@inbox.ru](mailto:shmakovis@inbox.ru)
 * LinkedIn: [geminishkvdev](https://www.linkedin.com/in/geminishkvdev/)
 
@@ -153,11 +185,11 @@ Packages: [GitHub](https://github.com/geminishkv?tab=packages) · [Docker Hub](h
 > The author is not responsible for any possible damage caused by the provided materials, including any text or graphic works.
 > All text and graphic works, including links, are for informational purposes only and are intended solely to share knowledge in product security.
 
----
+***
 
 <!-- CERTS-START -->
 
----
+***
 
 ### Certificates
 

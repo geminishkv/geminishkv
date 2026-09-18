@@ -37,8 +37,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install requests
-        run: pip install --disable-pip-version-check requests
+      - name: Install Python dependencies
+        # Pinned: an unpinned install changes under the pipeline without a commit.
+        run: pip install --disable-pip-version-check requests==2.34.2 pyyaml==6.0.3
 
       - name: Count commits across own repositories
         env:
@@ -273,17 +274,7 @@ jobs:
           print(f"Scorecard: {scored}/{len(repos)} repositories scored")
           EOF
 
-      - name: Generate Markdown table from YAML
-        id: table
-        uses: gazab/create-markdown-table@6686233d7008e8d8b9d4bbdbfd1fb1ae510019f0 # v1.0.7
-        with:
-          file: ./certs.yaml
-          columns: '["ContentId","Area","PageTitle","MetaDescription"]'
-
       - name: Render generated blocks in readme
-        env:
-          # Passed through the environment, never interpolated into the shell.
-          TABLE: ${{ steps.table.outputs.table }}
         run: |
           python3 - << 'EOF'
           import json
@@ -291,13 +282,11 @@ jobs:
           import pathlib
           import re
 
+          import yaml
+
           COMMITS_JSON = (
               "https://raw.githubusercontent.com/geminishkv/geminishkv/master/commits.json"
           )
-
-          certs_table = os.environ["TABLE"].strip()
-          if not certs_table:
-              raise SystemExit("Generated certificates table is empty — check certs.yaml")
 
           site = json.loads(
               pathlib.Path(os.environ["RUNNER_TEMP"], "site-data.json").read_text("utf-8")
@@ -360,6 +349,76 @@ jobs:
               ],
           )
 
+          # The certificates table used to come from a third-party action that runs
+          # on Node 20 and relies on the deprecated set-output command. It is a plain
+          # table, so it is built here with the same helpers as the other blocks.
+          CERT_COLUMNS = ["ContentId", "Area", "PageTitle", "MetaDescription"]
+          certs = yaml.safe_load(pathlib.Path("certs.yaml").read_text("utf-8")) or []
+          if not certs:
+              raise SystemExit("certs.yaml has no entries — the certificates table would be empty")
+          for number, cert in enumerate(certs, 1):
+              absent = [column for column in CERT_COLUMNS if not cert.get(column)]
+              if absent:
+                  raise SystemExit(f"certs.yaml entry {number} lacks {', '.join(absent)}")
+          certs_table = table(
+              CERT_COLUMNS,
+              ["| " + " | ".join(cell(cert[column]) for column in CERT_COLUMNS) + " |" for cert in certs],
+          )
+
+          def wrap(text, width=24):
+              """Mermaid re-wraps long label lines on its own and inflates the shape,
+              so lines are broken here."""
+              lines, current = [], ""
+              for word in str(text).replace('"', "'").split():
+                  if current and len(current) + 1 + len(word) > width:
+                      lines.append(current)
+                      current = word
+                  else:
+                      current = f"{current} {word}".strip()
+              return "<br/>".join([*lines, current])
+
+          def experience_flow(roles):
+              """The career pipeline of geminishkv.tech as a flowchart: oldest role on
+              top, the current one closes the chain. Notation follows ISO 5807."""
+              ordered = list(reversed(roles))
+              nodes, edges = [], []
+              for number, role in enumerate(ordered, 1):
+                  label = "<br/>".join(
+                      [
+                          wrap(" / ".join(company["name"] for company in role["companies"])),
+                          wrap(role["role"]),
+                          wrap(role["period"]),
+                      ]
+                  )
+                  last = number == len(ordered)
+                  shape = '(["{}"])' if last else '["{}"]'
+                  nodes.append(f"    role_{number}" + shape.format(label))
+                  if number > 1:
+                      edges.append(f"    role_{number - 1} --> role_{number}")
+              past = ",".join(f"role_{n}" for n in range(1, len(ordered)))
+              return "\n".join(
+                  [
+                      "```mermaid",
+                      '%%{init: {"flowchart": {"curve": "step"}}}%%',
+                      "flowchart TB",
+                      "    accTitle: Career pipeline",
+                      "    accDescr: Roles from the first one at the top to the current one at the bottom, the same pipeline as on geminishkv.tech.",
+                      "",
+                      *nodes,
+                      "",
+                      *edges,
+                      "",
+                      "    classDef stage fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f",
+                      "    classDef done fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d",
+                      "",
+                      f"    class {past} stage",
+                      f"    class role_{len(ordered)} done",
+                      "```",
+                  ]
+              )
+
+          flow = experience_flow(site["experience"])
+
           # Badge labels carry the year, so they are regenerated from commits.json
           # instead of being hardcoded — nothing to edit every January.
           years = sorted(
@@ -374,10 +433,11 @@ jobs:
 
           blocks = {
               "COMMIT-BADGES": badges,
+              "EXPERIENCE-FLOW": flow,
               "EXPERIENCE": experience,
               "PROJECTS": projects,
               "TOOLCHAIN": toolchain,
-              "CERTS": f"\n---\n\n### Certificates\n\n{certs_table}\n",
+              "CERTS": f"\n***\n\n### Certificates\n\n{certs_table}\n",
           }
 
           readme = pathlib.Path("readme.md")
