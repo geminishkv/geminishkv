@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">AppSec &#38; DevSecOps Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2826, Total PRs: 111, Total PRs Merged: 101, Merged PRs Percentage: 90.99, Total PRs Reviewed: 64, Total Issues: 6, Contributed to (last year): 15</desc>
+        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2903, Total PRs: 126, Total PRs Merged: 116, Merged PRs Percentage: 92.06, Total PRs Reviewed: 64, Total Issues: 6, Contributed to (last year): 15</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 91.94658707336137;
+        stroke-dashoffset: 89.1075514726583;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >2.8k</text>
+      >2.9k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >111</text>
+      >126</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged"
-      >101</text>
+      >116</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs_merged_percentage"
-      >90.99 %</text>
+      >92.06 %</text>
     </g>
   </g><g transform="translate(0, 125)">
     <g class="stagger" style="animation-delay: 1200ms" transform="translate(25, 0)">
