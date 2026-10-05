@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">AppSec &#38; DevSecOps Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2903, Total PRs: 126, Total PRs Merged: 116, Merged PRs Percentage: 92.06, Total PRs Reviewed: 64, Total Issues: 6, Contributed to (last year): 15</desc>
+        <desc id="descId">Total Stars Earned: 47, Total Commits  : 2904, Total PRs: 126, Total PRs Merged: 116, Merged PRs Percentage: 92.06, Total PRs Reviewed: 64, Total Issues: 6, Contributed to (last year): 15</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 89.1075514726583;
+        stroke-dashoffset: 89.10367109954596;
       }
     }
   
